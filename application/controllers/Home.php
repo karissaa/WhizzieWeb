@@ -11,7 +11,8 @@
         public function index(){
             $data['js'] = $this->load->view('include/javascript.php', NULL, TRUE);
             $data['css'] = $this->load->view('include/css.php', NULL, TRUE);
-            $this->load->view('pages/homeview.php', $data);
+            $data['fb'] = $this->load->view('include/firebase.php', NULL, TRUE);
+            $this->load->view('pages/cobalogin.php', $data);
         }
     }
 ?>

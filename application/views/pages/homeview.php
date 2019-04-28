@@ -1082,6 +1082,7 @@
 
 		<?php
 			echo $js;
+			echo $fb;
 		?>
 
 	</body>
