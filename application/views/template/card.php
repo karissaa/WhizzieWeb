@@ -12,7 +12,7 @@
             2. $row["itemPrice"] : Variabel yang menampung harga barang yang ingin ditampilkan
             3. $row["itemRating"] : Variabel yang menampung rating barang yang ingin ditampilkan
                 \-> item Rating sbenernya mau span fa-fa bintang itu, tapi gw gatau caranya, refer ke Whizzie unuk liat maksudnya
-            4. 
+            4. 3 icon belum gw masukkin, yang add to fav, compare, dan Quick View
         
         Reference :
             https://getbootstrap.com/docs/4.0/components/card/
