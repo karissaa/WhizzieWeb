@@ -18,6 +18,15 @@
     );
     echo form_password($password);
 
+
+    echo form_label('Confirm Password', 'confPasswd');
+    $passwordConfirmation = array(
+        'name' => 'loginPasswordConfirm',
+        'class' => 'form-control',
+        'placeholder' => 'Input Your Password Again'
+    );
+    echo form_password($passwordConfirmation);
+
     $btnSubmit = array(
         'class' => 'btn btn-primary'
     );
