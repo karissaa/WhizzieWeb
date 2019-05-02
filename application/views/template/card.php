@@ -22,7 +22,7 @@
         
 ?>
     <div class="card">
-        <img src=<?php $row["posterLink"];?> alt="">
+        <img src=<?php echo $row["posterLink"];?> alt="">
         <div class="card-body">
             <h5 class="card-title"><?php echo $row["itemName"]; ?></h5>
             <p class="card-text"><?php echo $row["itemPrice"]; ?></p>
