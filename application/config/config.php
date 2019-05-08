@@ -12,7 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |	http://example.com/
 |
 | WARNING: You MUST set this value!
-|
+|s
 | If it is not set, then CodeIgniter will try guess the protocol and path
 | your installation, but due to security concerns the hostname will be set
 | to $_SERVER['SERVER_ADDR'] if available, or localhost otherwise.
@@ -23,9 +23,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-// $config['base_url'] = 'http://localhost/PemWeb/UAS/WhizzieWeb';
-// Base URL di Elli
-$config['base_url'] = 'http://localhost/LinkUASPemWeb';
+// $config['base_url'] = 'http://localhost/PemWeb/UAS/WhizzieWeb'; //Base URL Karissa
+// $config['base_url'] = 'http://localhost/LinkUASPemWeb'; //Base URL Elli
+// $config['base_url'] = "http://localhost/WhizzieWeb"; //Base URL Alex
 
 /*
 |--------------------------------------------------------------------------
