@@ -55,6 +55,10 @@ Table OF Contents
 	Typography
 \*----------------------------*/
 
+.container-upload {
+  background-color: #D10024;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
