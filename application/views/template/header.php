@@ -21,7 +21,7 @@
             </ul>
             <ul class="header-links pull-right">
                 <li>
-                    <a href="#" id = "userName">
+                    <a href="<?php echo base_url("index.php/Profile/index"); ?>" id = "userName">
                         <i class="fa fa-user-o"></i> My Account 
                     </a>
                 </li>
@@ -43,7 +43,7 @@
                 </div>
 
                 <!-- SEARCH BAR -->
-                <div class="col-md-7">
+                <div class="col-md-6">
                     <div class="header-search">
                         <form>
                             <div class="col-md-1"></div>
@@ -57,13 +57,23 @@
                 </div>
 
                 <!-- ACCOUNT -->
-                <div class="col-md-3 clearfix">
+                <div class="col-md-4 clearfix">
                     <div class="header-ctn">
                         <!-- Notification -->
                         <div>
                             <a href="#">
                                 <i class="fa fa-bell-o"></i>
                                 <span> Notifications </span>
+                                <!-- Count from Database -->
+                                <div class="qty">2</div>
+                            </a>
+                        </div>
+
+                        <!-- Notification -->
+                        <div>
+                            <a href="<?php echo base_url("index.php/Transaction/index"); ?>">
+                                <i class="fa fa-sticky-note"></i>
+                                <span> Transactions </span>
                                 <!-- Count from Database -->
                                 <div class="qty">2</div>
                             </a>
