@@ -9,23 +9,23 @@
 		<title>Electro - HTML Ecommerce Template</title>
 
  		<!-- Google font -->
- 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+ 		<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet"> -->
 
  		<!-- Bootstrap -->
- 		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+ 		<!-- <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/> -->
 
  		<!-- Slick -->
- 		<link type="text/css" rel="stylesheet" href="css/slick.css"/>
- 		<link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
+ 		<!-- <link type="text/css" rel="stylesheet" href="css/slick.css"/>
+ 		<link type="text/css" rel="stylesheet" href="css/slick-theme.css"/> -->
 
  		<!-- nouislider -->
- 		<link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
+ 		<!-- <link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/> -->
 
  		<!-- Font Awesome Icon -->
- 		<link rel="stylesheet" href="css/font-awesome.min.css">
+ 		<!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
 
  		<!-- Custom stlylesheet -->
- 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+ 		<!-- <link type="text/css" rel="stylesheet" href="css/style.css"/> -->
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,6 +33,12 @@
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
+
+		<?=$css?>
+		<?=$firebase?>
+		
+		<?=$js_classes?>
+		<?=$js_functions?>
 
     </head>
 	<body>
@@ -187,11 +193,11 @@
 		<!-- /NAVIGATION -->
 
 		<!-- BREADCRUMB -->
-		<div id="breadcrumb" class="section">
+		<!-- <div id="breadcrumb" class="section"> -->
 			<!-- container -->
-			<div class="container">
+			<!-- <div class="container"> -->
 				<!-- row -->
-				<div class="row">
+				<!-- <div class="row">
 					<div class="col-md-12">
 						<ul class="breadcrumb-tree">
 							<li><a href="#">Home</a></li>
@@ -200,12 +206,99 @@
 							<li class="active">Headphones (227,490 Results)</li>
 						</ul>
 					</div>
-				</div>
+				</div> -->
 				<!-- /row -->
-			</div>
+			<!-- </div> -->
 			<!-- /container -->
-		</div>
+		<!-- </div> -->
 		<!-- /BREADCRUMB -->
+
+		<style>
+		.file {
+			visibility: hidden;
+			position: absolute;
+		}
+		.container-upload {
+			border-radius: 25px;
+			background: #ccced1;
+			padding: 20px; 
+		}
+		.center-title {
+			display: flex;
+  		justify-content: center;
+		}
+		</style>
+
+		<br><br>
+
+		<div class="container container-upload">
+				<div class="center-title">
+					<h2>Upload Your Wish</h2>
+				</div>
+				<div class="center-title">
+					<button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">Click Here!</button>
+				</div>
+			<div id="demo" class="collapse">
+				<br>
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="title">Title</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="title" placeholder="Enter title">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="descWish">Description</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="descWish" placeholder="Enter description">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<div class="dropdown">
+								<button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">Categories
+								<span class="caret"></span></button>
+								<ul class="dropdown-menu">
+									<!-- Bikin Foreach untuk Categories -->
+									<li><a href="#">Automotive</a></li>
+									<li><a href="#">Beauty</a></li>
+									<li><a href="#">Men Fashion</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<input type="file" name="img[]" class="file">
+							<div class="input-group col-xs-12">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+								<input type="text" class="form-control input-lg" disabled placeholder="Upload Image">
+								<span class="input-group-btn">
+									<button class="browse btn btn-danger input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button class="btn btn-danger">Upload Wish</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script>
+		$(document).on('click', '.browse', function(){
+			var file = $(this).parent().parent().parent().find('.file');
+			file.trigger('click');
+		});
+		$(document).on('change', '.file', function(){
+			$(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
+		});
+		</script>
+
+		
 
 		<!-- SECTION -->
 		<div class="section">
@@ -358,7 +451,7 @@
 							<h3 class="aside-title">Top selling</h3>
 							<div class="product-widget">
 								<div class="product-img">
-									<img src="./img/product01.png" alt="">
+									<img src="../../assets/img/product01.png" alt="">
 								</div>
 								<div class="product-body">
 									<p class="product-category">Category</p>
@@ -369,7 +462,7 @@
 
 							<div class="product-widget">
 								<div class="product-img">
-									<img src="./img/product02.png" alt="">
+									<img src="../../assets/img/product02.png" alt="">
 								</div>
 								<div class="product-body">
 									<p class="product-category">Category</p>
@@ -380,7 +473,7 @@
 
 							<div class="product-widget">
 								<div class="product-img">
-									<img src="./img/product03.png" alt="">
+									<img src="../../assets/img/product03.png" alt="">
 								</div>
 								<div class="product-body">
 									<p class="product-category">Category</p>
@@ -427,7 +520,7 @@
 							<div class="col-md-4 col-xs-6">
 								<div class="product">
 									<div class="product-img">
-										<img src="./img/product01.png" alt="">
+										<img src="../../assets/img/product01.png" alt="">
 										<div class="product-label">
 											<span class="sale">-30%</span>
 											<span class="new">NEW</span>
@@ -461,7 +554,7 @@
 							<div class="col-md-4 col-xs-6">
 								<div class="product">
 									<div class="product-img">
-										<img src="./img/product02.png" alt="">
+										<img src="../../assets/img/product02.png" alt="">
 										<div class="product-label">
 											<span class="new">NEW</span>
 										</div>
@@ -496,7 +589,7 @@
 							<div class="col-md-4 col-xs-6">
 								<div class="product">
 									<div class="product-img">
-										<img src="./img/product03.png" alt="">
+										<img src="../../assets/img/product03.png" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
@@ -523,7 +616,7 @@
 							<div class="col-md-4 col-xs-6">
 								<div class="product">
 									<div class="product-img">
-										<img src="./img/product04.png" alt="">
+										<img src="../../assets/img/product04.png" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
@@ -550,7 +643,7 @@
 							<div class="col-md-4 col-xs-6">
 								<div class="product">
 									<div class="product-img">
-										<img src="./img/product05.png" alt="">
+										<img src="../../assets/img/product05.png" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
@@ -575,7 +668,7 @@
 							<div class="col-md-4 col-xs-6">
 								<div class="product">
 									<div class="product-img">
-										<img src="./img/product06.png" alt="">
+										<img src="../../assets/img/product06.png" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
@@ -607,7 +700,7 @@
 							<div class="col-md-4 col-xs-6">
 								<div class="product">
 									<div class="product-img">
-										<img src="./img/product07.png" alt="">
+										<img src="../../assets/img/product07.png" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
@@ -637,7 +730,7 @@
 							<div class="col-md-4 col-xs-6">
 								<div class="product">
 									<div class="product-img">
-										<img src="./img/product08.png" alt="">
+										<img src="../../assets/img/product08.png" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
@@ -664,7 +757,7 @@
 							<div class="col-md-4 col-xs-6">
 								<div class="product">
 									<div class="product-img">
-										<img src="./img/product09.png" alt="">
+										<img src="../../assets/img/product09.png" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
@@ -840,13 +933,15 @@
 		</footer>
 		<!-- /FOOTER -->
 
+		<?=$js?>
+
 		<!-- jQuery Plugins -->
-		<script src="js/jquery.min.js"></script>
+		<!-- <script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/slick.min.js"></script>
 		<script src="js/nouislider.min.js"></script>
 		<script src="js/jquery.zoom.min.js"></script>
-		<script src="js/main.js"></script>
+		<script src="js/main.js"></script> -->
 
 	</body>
 </html>
