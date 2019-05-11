@@ -110,7 +110,7 @@
                                 </div>
 
                                 <div class="cart-btns">
-                                    <a href="#">View Cart</a>
+                                    <a href="<?php echo base_url("index.php/Cart/index"); ?>">View Cart</a>
                                     <a href="#">Checkout <i class="fa fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
