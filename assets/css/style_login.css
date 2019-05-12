@@ -6,9 +6,11 @@
 
 html, body {
   /* font-family: 'Open Sans', Helvetica, Arial, sans-serif; */
-  background: #ededed;
+  background: #070606;
+  background-image: url("../../assets/img/backdrop2.jpg");
+  background-size: contain;
   height: 100%;
-  width: 1500px;
+  /* width: 1500px; */
 }
 
 input, button {
@@ -27,7 +29,7 @@ input, button {
 .cont {
   overflow: hidden;
   position: relative;
-  width: 100%;
+  width: 1500px;
   height:  100%;
   margin: 0 auto;
   background: #fff;
@@ -89,8 +91,9 @@ button {
   top: 0;
   width: 1900px;
   height: 100%;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/sections-3.jpg");
+  background-image: url("../../assets/img/login.jpg");
   background-size: cover;
+  /* background-size: 0%; */
   transition: -webkit-transform 1.2s ease-in-out;
   transition: transform 1.2s ease-in-out;
   transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
@@ -105,8 +108,8 @@ button {
   background: rgba(0, 0, 0, 0.6);
 }
 .cont.s--signup .img:before {
-  -webkit-transform: translate3d(140px, 0, 0);
-          transform: translate3d(140px, 0, 0);
+  -webkit-transform: translate3d(1000px, 0, 0);
+          transform: translate3d(1000px, 0, 0);
 }
 .img__text {
   z-index: 2;
@@ -134,8 +137,8 @@ button {
           transform: translateX(820px);
 }
 .img__text.m--in {
-  -webkit-transform: translateX(-520px);
-          transform: translateX(-520px);
+  -webkit-transform: translateX(-920px);
+          transform: translateX(-920px);
 }
 .cont.s--signup .img__text.m--in {
   -webkit-transform: translateX(0);
@@ -244,12 +247,13 @@ input {
 
 .sign-in {
   transition-timing-function: ease-out;
+  padding-left: 300px;
 }
 .cont.s--signup .sign-in {
   transition-timing-function: ease-in-out;
   transition-duration: 1.2s;
-  -webkit-transform: translate3d(200px, 0, 0);
-          transform: translate3d(200px, 0, 0);
+  -webkit-transform: translate3d(-900px, 0, 0);
+          transform: translate3d(-900px, 0, 0);
 }
 
 .sign-up {

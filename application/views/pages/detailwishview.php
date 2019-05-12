@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>Whizzie | Product Details</title>
+		<title>Whizzie | Wish Details</title>
 
 		<?=$css?>
 		<?=$firebase?>
@@ -31,7 +31,7 @@
 				<!-- row -->
 				<div class="row">
 					<div class="col-md-12">
-						<h3 class="breadcrumb-header">Product Details</h3>
+						<h3 class="breadcrumb-header">Wish Details</h3>
 						<ul class="breadcrumb-tree">
 							<li><a href="<?php echo base_url(); ?>">Home</a></li>
 							<li class="active">Blank</li>

@@ -97,7 +97,7 @@
 
 				<div id="demo" class="collapse">
 					<!-- Untuk per toko -->
-					<div class="row" style="background-color: white; border-radius: 25px; padding: 20px;">
+					<div class="row" style="background-color: white; border-radius: 25px; padding: 20px; margin:1px;">
 						<!-- Untuk Judul Toko -->
 						<div class="row">
 							<div class="col-sm-1" style="text-align: right;" >	
@@ -151,7 +151,7 @@
 					<br>
 
 					<!-- Untuk per toko 2 -->
-					<div class="row" style="background-color: white; border-radius: 25px; padding: 20px;">
+					<div class="row" style="background-color: white; border-radius: 25px; padding: 20px; margin:1px;">
 						<!-- Untuk Judul Toko -->
 						<div class="row">
 							<div class="col-sm-1" style="text-align: right;" >	

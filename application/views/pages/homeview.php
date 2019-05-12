@@ -9,15 +9,6 @@
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 		<title>Whizzie</title>
-
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		
-		<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-
 		
 		<?=$css?>
 		<?=$firebase?>
@@ -52,6 +43,7 @@
 				<div class="col-md-12">
 					<div class="section-title">
 						<h3 class="title">Latest Wishes </h3>
+						<a class="primary-btn cta-btn pull-right" href="<?=base_url("index.php/Wishes/index"); ?>">More Wishes</a>
 					</div>
 				</div>
 				<div class="row" id = "latestWish">
@@ -142,6 +134,7 @@
 					<div class="col-md-12">
 						<div class="section-title">
 							<h3 class="title"> Featured Product </h3>
+							<a class="primary-btn cta-btn pull-right" href="<?=base_url("index.php/Products/index"); ?>">More Products</a>
 						</div>
 					</div>
 

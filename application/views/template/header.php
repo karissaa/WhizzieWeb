@@ -13,8 +13,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url("index.php/DetailProduct/index"); ?>">
-                                <i class="fa fa-home"></i> Detail Product
+                            <a href="<?php echo base_url("index.php/DetailWish/index"); ?>">
+                                <i class="fa fa-home"></i> Detail Wish
                             </a>
                         </li>
                     </ul>
@@ -27,7 +27,7 @@
                         </li>
                         <li>
                             <a href="<?php echo base_url("index.php/Profile/index"); ?>" id = "userName">
-                                <i class="fa fa-user-o"></i> My Account 
+                                <i class="fa fa-user-o"></i> My Account | <b>Wisher's Mode</b>
                             </a>
                         </li>
                         <li>

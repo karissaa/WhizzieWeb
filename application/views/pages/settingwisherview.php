@@ -27,13 +27,13 @@
 		</div>
 
 		<!-- BREADCRUMB -->
-		<div id="breadcrumb" class="section">
+		<div id="breadcrumb" class="section"  style="margin:0px;">
 			<!-- container -->
 			<div class="container">
 				<!-- row -->
 				<div class="row">
 					<div class="col-md-12">
-						<h3 class="breadcrumb-header">Profile</h3>
+						<h3 class="breadcrumb-header">Setting Profile Wisher</h3>
 						<ul class="breadcrumb-tree">
 							<li><a href="<?php echo base_url(); ?>">Home</a></li>
 							<li class="active">Blank</li>
@@ -70,13 +70,15 @@
 		<!-- SECTION -->
 		<div class="section">
 			<!-- container -->
-            <div class="container" style="text-align:center;">
-                <div class="col-sm-6" style="background: grey; border-radius: 20px; text-align:center; padding: 20px; ">
-                    <a href="#"><b>ABORT CHANGES</b></a>
+			<div class="container" style="text-align:center;">
+				<div class="col-sm-1  pull-right" style="background: grey; border-radius: 20px; text-align:center; padding: 20px;margin: 5px;">
+                    <a href="<?php echo base_url("index.php/Profile/index"); ?>"><b>CANCEL</b></a>
                 </div>
-                <div class="col-sm-6" style="background: orange; border-radius: 20px; text-align:center; padding: 20px; ">
+				<div class="col-sm-2  pull-right" style="background: orange; border-radius: 20px; text-align:center; padding: 20px;margin: 5px; ">
                     <a href="#"><b>SAVE CHANGES</b></a>
                 </div>
+                
+                
             </div>
 
 			<div class="container container-upload image-back" style="overflow: auto; float: none; text-align:center;">
@@ -96,11 +98,31 @@
                 <h1>SETTINGS</h1>
 			</div>
 
+			<!-- Ganti Name -->
             <div class="container container-upload" style="background: orange; overflow: auto; float: none; text-align:center; margin-bottom: 5px;">
 				<div class="center-title">
-					<a data-toggle="collapse" data-target="#demo"><b>Change Full Name</b></a>
+					<a data-toggle="collapse" data-target="#fullname"><b>Change Full Name</b></a>
 				</div>
-                <div id="demo" class="collapse">
+                <div id="fullname" class="collapse">
+                    <br>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="fullname">Full Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="fullname" placeholder="Enter Full Name">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+			</div>
+			<!-- / Ganti Name -->
+			
+			<!-- Ganti Pssword -->
+			<div class="container container-upload" style="background: orange; overflow: auto; float: none; text-align:center; margin-bottom: 5px;">
+				<div class="center-title">
+					<a data-toggle="collapse" data-target="#changepassword"><b>Change Password</b></a>
+				</div>
+                <div id="changepassword" class="collapse">
                     <br>
                     <form class="form-horizontal">
                         <div class="form-group">
@@ -111,69 +133,82 @@
                         </div>
                     </form>
                 </div>
-            </div>
+			</div>
+			<!-- / Ganti Pssword -->
 
+
+			<!-- Ganti Alamat -->
             <div class="container container-upload" style="background: orange; overflow: auto; float: none;margin-bottom: 5px;">
 				<div class="center-title">
 					<a data-toggle="collapse" data-target="#demoo"><b>Change Address</b></a>
 				</div>
                 <div id="demoo" class="collapse">
-                <br>
-                <div class="row" style="background-color: white; border-radius: 25px; padding: 20px;">
-                        <!-- Untuk Judul Toko -->
-                        
+					<br>
+					
+					<!-- Untuk Alamat -->
+					<div class="row" style="background-color: white; border-radius: 25px; padding: 20px;margin:1px;margin-bottom:5px;">
+					
 						<div class="row">
-							<div class="col-sm-1" style="text-align: right;" >	
-								<img src="../../assets/img/ikea.jpg" alt="" style="border-radius: 25px; object-fit: cover; width: 50px; height: 50px;"/>
+							<div class="col-sm-4">
+								<h4>Alamat Rumah</h4>
+								<p><span><b>Receiver: </b></span><span>Karissa</span></p>
+								<p>Jalan Alicante Timur 5 No. 56</p>
+								<p>Cluster Alicante Gading Serpong</p>
 							</div>
-							<div class="col-sm-9">
-								<h4>IKEA Indonesia</h4>
-								<p>Total Rp 182.900,-</p>
-								<p>No. Resi: BDG393092</p>
+							<div class="col-sm-3">
+								<p><b>City</b></p>
+								<p>Tangerang</p>
+								<p><b>Province</b></p>
+								<p>Banten</p>
+							</div>
+							<div class="col-sm-3">
+								<p><b>Postal Code</b></p>
+								<p>15334</p>
+								<p><b>Phone Number</b></p>
+								<p>+62 815 880 888</p>
 							</div>
 							<div class="col-sm-2">
-								<button type="button" class="btn btn-danger">Sudah Bayar</button>
+								<button type="button" class="btn btn-info">Edit Address</button>
 							</div>
 						</div>
+					</div>
+					<!-- /Untuk Alamat -->
 
-						<br>
-
-						<!-- /Untuk Judul Toko -->
-						<!-- Untuk barang dalam toko -->
+					<!-- Untuk Alamat -->
+					<div class="row" style="background-color: white; border-radius: 25px; padding: 20px;margin:1px;margin-bottom:5px;">
+					
 						<div class="row">
+							<div class="col-sm-4">
+								<h4>Alamat Rumah</h4>
+								<p><span><b>Receiver: </b></span><span>Karissa</span></p>
+								<p>Jalan Alicante Timur 5 No. 56</p>
+								<p>Cluster Alicante Gading Serpong</p>
+							</div>
+							<div class="col-sm-3">
+								<p><b>City</b></p>
+								<p>Tangerang</p>
+								<p><b>Province</b></p>
+								<p>Banten</p>
+							</div>
+							<div class="col-sm-3">
+								<p><b>Postal Code</b></p>
+								<p>15334</p>
+								<p><b>Phone Number</b></p>
+								<p>+62 815 880 888</p>
+							</div>
 							<div class="col-sm-2">
-								<div style="text-align: right;">
-									<img src="../../assets/img/009.jpg" alt="" style="object-fit: cover; width: 100px; height: 100px;" />
-								</div>
-							</div>
-							<div class="col-sm-8">
-								<h4>KULLA Dining Table</h4>
-								<p>Qty: 1</p>
-								<p>Total Rp 80.600,-</p>
+								<button type="button" class="btn btn-info">Edit Address</button>
 							</div>
 						</div>
+					</div>
+					<!-- /Untuk Alamat -->
 
-						<br>
 
-						<div class="row">
-							<div class="col-sm-2">
-								<div style="text-align: right;">
-									<img src="../../assets/img/010.jpg" alt="" style="object-fit: cover; width: 100px; height: 100px;" />
-								</div>
-							</div>
-							<div class="col-sm-8">
-								<h4>POHUNI Dining Chair</h4>
-								<p>Qty: 3</p>
-								<p>Total Rp 102.300,-</p>
-							</div>
-						</div>
-						<!-- /Untuk barang dalam toko -->
-						</div>
+
                 </div>
-            </div>
+			</div>
+			<!-- Ganti Alamat -->
 
-
-            
 
 		</div>
 

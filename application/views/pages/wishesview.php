@@ -69,6 +69,7 @@
 		<br><br>
 		 -->
 
+		<!-- TODO: Cuma Muncul kalo Wisher's Mode -->
 		<div class="container container-upload">
 				<div class="center-title">
 					<h2>Upload Your Wish</h2>
@@ -353,7 +354,7 @@
 						<!-- /store top filter -->
 
 						<!-- store products -->
-						<div class="row">
+						<div class="row" id = "wishSection">
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
 								<div class="product">
@@ -408,7 +409,7 @@
 							</div>
 							<!-- /product -->
 
-							<div class="clearfix visible-sm visible-xs"></div>
+							<!-- <div class="clearfix visible-sm visible-xs"></div> -->
 
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
@@ -437,7 +438,7 @@
 							</div>
 							<!-- /product -->
 
-							<div class="clearfix visible-lg visible-md"></div>
+							<!-- <div class="clearfix visible-lg visible-md"></div> -->
 
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
@@ -466,63 +467,7 @@
 							</div>
 							<!-- /product -->
 
-							<div class="clearfix visible-sm visible-xs"></div>
-
-							<!-- product -->
-							<div class="col-md-4 col-xs-6">
-								<div class="product">
-									<div class="product-img">
-										<img src="../../assets/img/gigi.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">Men Fashion</p>
-										<h3 class="product-name"><a href="#">Wooden Mahogany Watch</a></h3>
-										<p>Really need one for my wedding!</p>
-										<div class="row">
-											<button class="btn"><b>8 Offers</b></button>
-											<div class="btn-group product-btns">
-												<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">
-													<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>
-												</button>
-												<div class="dropdown-menu">
-													<a class="dropdown-item" href="#">Edit</a>
-													<a class="dropdown-item" href="#">Delete</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /product -->
-
-							<!-- product -->
-							<div class="col-md-4 col-xs-6">
-								<div class="product">
-									<div class="product-img">
-										<img src="../../assets/img/gigi.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">Men Fashion</p>
-										<h3 class="product-name"><a href="#">Wooden Mahogany Watch</a></h3>
-										<p>Really need one for my wedding!</p>
-										<div class="row">
-											<button class="btn"><b>8 Offers</b></button>
-											<div class="btn-group product-btns">
-												<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">
-													<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>
-												</button>
-												<div class="dropdown-menu">
-													<a class="dropdown-item" href="#">Edit</a>
-													<a class="dropdown-item" href="#">Delete</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /product -->
-
-							<div class="clearfix visible-lg visible-md visible-sm visible-xs"></div>
+							<!-- <div class="clearfix visible-sm visible-xs"></div> -->
 
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
@@ -578,7 +523,63 @@
 							</div>
 							<!-- /product -->
 
-							<div class="clearfix visible-sm visible-xs"></div>
+							<!-- <div class="clearfix visible-lg visible-md visible-sm visible-xs"></div> -->
+
+							<!-- product -->
+							<div class="col-md-4 col-xs-6">
+								<div class="product">
+									<div class="product-img">
+										<img src="../../assets/img/gigi.jpg" alt="">
+									</div>
+									<div class="product-body">
+										<p class="product-category">Men Fashion</p>
+										<h3 class="product-name"><a href="#">Wooden Mahogany Watch</a></h3>
+										<p>Really need one for my wedding!</p>
+										<div class="row">
+											<button class="btn"><b>8 Offers</b></button>
+											<div class="btn-group product-btns">
+												<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">
+													<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>
+												</button>
+												<div class="dropdown-menu">
+													<a class="dropdown-item" href="#">Edit</a>
+													<a class="dropdown-item" href="#">Delete</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /product -->
+
+							<!-- product -->
+							<div class="col-md-4 col-xs-6">
+								<div class="product">
+									<div class="product-img">
+										<img src="../../assets/img/gigi.jpg" alt="">
+									</div>
+									<div class="product-body">
+										<p class="product-category">Men Fashion</p>
+										<h3 class="product-name"><a href="#">Wooden Mahogany Watch</a></h3>
+										<p>Really need one for my wedding!</p>
+										<div class="row">
+											<button class="btn"><b>8 Offers</b></button>
+											<div class="btn-group product-btns">
+												<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">
+													<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>
+												</button>
+												<div class="dropdown-menu">
+													<a class="dropdown-item" href="#">Edit</a>
+													<a class="dropdown-item" href="#">Delete</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /product -->
+
+							<!-- <div class="clearfix visible-sm visible-xs"></div> -->
 
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">

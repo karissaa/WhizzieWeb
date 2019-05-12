@@ -27,13 +27,13 @@
 		</div>
 
 		<!-- BREADCRUMB -->
-		<div id="breadcrumb" class="section">
+		<div id="breadcrumb" class="section"  style="margin:0px;">
 			<!-- container -->
 			<div class="container">
 				<!-- row -->
 				<div class="row">
 					<div class="col-md-12">
-						<h3 class="breadcrumb-header">Profile</h3>
+						<h3 class="breadcrumb-header">Setting Profile Genie</h3>
 						<ul class="breadcrumb-tree">
 							<li><a href="<?php echo base_url(); ?>">Home</a></li>
 							<li class="active">Blank</li>
@@ -59,7 +59,7 @@
 		.image-back{
 			background-image: url(../../assets/img/009.jpg);
 			/* object-fit: contain; */
-			height: 320px;
+			height: 420px;
 		}
 		.center-title {
 			display: flex;
@@ -70,135 +70,147 @@
 		<!-- SECTION -->
 		<div class="section">
 			<!-- container -->
+			<div class="container" style="text-align:center;">
+				<div class="col-sm-1  pull-right" style="background: grey; border-radius: 20px; text-align:center; padding: 20px;margin: 5px;">
+                    <a href="<?php echo base_url("index.php/ProfileGenie/index"); ?>"><b>CANCEL</b></a>
+                </div>
+				<div class="col-sm-2  pull-right" style="background: #523163; border-radius: 20px; text-align:center; padding: 20px;margin: 5px; ">
+                    <a href="#"><b style="color:white;">SAVE CHANGES</b></a>
+                </div>
+                
+                
+            </div>
 
-			<div class="container container-upload image-back" style="overflow: auto; float: none; text-align:center;">
+			<div class="container container-upload image-back" style="overflow: auto; float: none; text-align:center; ">
 				<div style="background: rgba(0, 0, 0, 0.75); padding: 20px; width: 250px; border-radius: 20px; margin-left: auto; margin-right: auto; ">
 					<img src="../../assets/img/gigi.jpg" alt="" style="border-radius: 75px; object-fit: cover; width: 150px; height: 150px;"/>
 					<h3 style="padding-top: 20px; color: white;">Felicia Karissa</h3>
-					
                 </div>
+                <br>
                 <div>
-                    <button>He</button>
-                    <button>He</button>
+                    <a class="cta-btn primary-btn" style="background: #523163;margin: 5px;"><b>Change Profile Picture</b></a><br>
+                    
+                    <a class="cta-btn primary-btn" style="background: #523163;margin: 5px;"><b>Change Background</b></a>
 				</div>
 			</div>
 
-			<div class="container container-upload" style="background: white; overflow: auto; float: none; text-align:center;">
-				<h1>MY WISHES</h1>
-				
-				<div class="row">
-					<!-- product -->
-					<div class="col-md-3 col-xs-6">
-						<div class="product">
-							<div class="product-img">
-								<img src="../../assets/img/001.jpg" alt="">
-							</div>
-							<div class="product-body">
-								<p class="product-category">Men Fashion</p>
-								<h3 class="product-name"><a href="#">Wooden Mahogany Watch</a></h3>
-								<p>Really need one for my wedding!</p>
-								<div class="row">
-									<button class="btn"><b>8 Offers</b></button>
-									<div class="btn-group product-btns">
-										<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">
-											<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>
-										</button>
-										<div class="dropdown-menu">
-											<a class="dropdown-item" href="#">Edit</a>
-											<a class="dropdown-item" href="#">Delete</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /product -->
-
-					<!-- product -->
-					<div class="col-md-3 col-xs-6">
-						<div class="product">
-							<div class="product-img">
-								<img src="../../assets/img/gigi.jpg" alt="">
-							</div>
-							<div class="product-body">
-								<p class="product-category">Men Fashion</p>
-								<h3 class="product-name"><a href="#">Wooden Mahogany Watch</a></h3>
-								<p>Really need one for my wedding!</p>
-								<div class="row">
-									<button class="btn"><b>8 Offers</b></button>
-									<div class="btn-group product-btns">
-										<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">
-											<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>
-										</button>
-										<div class="dropdown-menu">
-											<a class="dropdown-item" href="#">Edit</a>
-											<a class="dropdown-item" href="#">Delete</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /product -->
-
-					<!-- product -->
-					<div class="col-md-3 col-xs-6">
-						<div class="product">
-							<div class="product-img">
-								<img src="../../assets/img/009.jpg" alt="">
-							</div>
-							<div class="product-body">
-								<p class="product-category">Men Fashion</p>
-								<h3 class="product-name"><a href="#">Wooden Mahogany Watch</a></h3>
-								<p>Really need one for my wedding!</p>
-								<div class="row">
-									<button class="btn"><b>8 Offers</b></button>
-									<div class="btn-group product-btns">
-										<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">
-											<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>
-										</button>
-										<div class="dropdown-menu">
-											<a class="dropdown-item" href="#">Edit</a>
-											<a class="dropdown-item" href="#">Delete</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /product -->
-
-					<!-- product -->
-					<div class="col-md-3 col-xs-6">
-						<div class="product">
-							<div class="product-img">
-								<img src="../../assets/img/010.jpg" alt="" style="object-fit: cover; width: 260px; height: 260px;">
-							</div>
-							<div class="product-body">
-								<p class="product-category">Men Fashion</p>
-								<h3 class="product-name"><a href="#">Wooden Mahogany Watch</a></h3>
-								<p>Really need one for my wedding!</p>
-								<div class="row">
-									<button class="btn"><b>8 Offers</b></button>
-									<div class="btn-group product-btns">
-										<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">
-											<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>
-										</button>
-										<div class="dropdown-menu">
-											<a class="dropdown-item" href="#">Edit</a>
-											<a class="dropdown-item" href="#">Delete</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /product -->
-
-				</div>
-				
-
+            <div class="center-title" style="margin: 20px;">
+                <h1>SETTINGS</h1>
 			</div>
+
+			<!-- Ganti Name -->
+            <div class="container container-upload" style="background: #523163; overflow: auto; float: none; text-align:center; margin-bottom: 5px;">
+				<div class="center-title">
+					<a data-toggle="collapse" data-target="#fullname"><b style="color:white;">Change Store's Name</b></a>
+				</div>
+                <div id="fullname" class="collapse">
+                    <br>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="fullname"style="color:white;" >Store's Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="fullname" placeholder="Enter Store's Name">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+			</div>
+			<!-- / Ganti Name -->
+			
+			<!-- Ganti Pssword -->
+			<div class="container container-upload" style="background: #523163; overflow: auto; float: none; text-align:center; margin-bottom: 5px;">
+				<div class="center-title">
+					<a data-toggle="collapse" data-target="#changepassword"><b style="color:white;">Change Password</b></a>
+				</div>
+                <div id="changepassword" class="collapse">
+                    <br>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="title" style="color:white;">New Password</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="title" placeholder="Enter Password">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+			</div>
+			<!-- / Ganti Pssword -->
+
+
+			<!-- Ganti Alamat -->
+            <div class="container container-upload" style="background: #523163; overflow: auto; float: none;margin-bottom: 5px;">
+				<div class="center-title">
+					<a data-toggle="collapse" data-target="#demoo"><b style="color:white;">Change Address</b></a>
+				</div>
+                <div id="demoo" class="collapse">
+					<br>
+					
+					<!-- Untuk Alamat -->
+					<div class="row" style="background-color: white; border-radius: 25px; padding: 20px;margin:1px;margin-bottom:5px;">
+					
+						<div class="row">
+							<div class="col-sm-4">
+								<h4>Alamat Rumah</h4>
+								<p><span><b>Receiver: </b></span><span>Karissa</span></p>
+								<p>Jalan Alicante Timur 5 No. 56</p>
+								<p>Cluster Alicante Gading Serpong</p>
+							</div>
+							<div class="col-sm-3">
+								<p><b>City</b></p>
+								<p>Tangerang</p>
+								<p><b>Province</b></p>
+								<p>Banten</p>
+							</div>
+							<div class="col-sm-3">
+								<p><b>Postal Code</b></p>
+								<p>15334</p>
+								<p><b>Phone Number</b></p>
+								<p>+62 815 880 888</p>
+							</div>
+							<div class="col-sm-2">
+								<button type="button" class="btn btn-info">Edit Address</button>
+							</div>
+						</div>
+					</div>
+					<!-- /Untuk Alamat -->
+
+					<!-- Untuk Alamat -->
+					<div class="row" style="background-color: white; border-radius: 25px; padding: 20px;margin:1px;margin-bottom:5px;">
+					
+						<div class="row">
+							<div class="col-sm-4">
+								<h4>Alamat Rumah</h4>
+								<p><span><b>Receiver: </b></span><span>Karissa</span></p>
+								<p>Jalan Alicante Timur 5 No. 56</p>
+								<p>Cluster Alicante Gading Serpong</p>
+							</div>
+							<div class="col-sm-3">
+								<p><b>City</b></p>
+								<p>Tangerang</p>
+								<p><b>Province</b></p>
+								<p>Banten</p>
+							</div>
+							<div class="col-sm-3">
+								<p><b>Postal Code</b></p>
+								<p>15334</p>
+								<p><b>Phone Number</b></p>
+								<p>+62 815 880 888</p>
+							</div>
+							<div class="col-sm-2">
+								<button type="button" class="btn btn-info">Edit Address</button>
+							</div>
+						</div>
+					</div>
+					<!-- /Untuk Alamat -->
+
+
+
+                </div>
+			</div>
+			<!-- Ganti Alamat -->
+
+
+		</div>
 
 			<!-- /container -->
 		</div>

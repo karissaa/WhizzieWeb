@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>Wizzie | Products</title>
+		<title> Whizzie | Products</title>
 
 		<?=$css?>
 		<?=$firebase?>
@@ -69,9 +69,10 @@
 		<br><br>
 		 -->
 
+		 <!-- TODO: Cuma Muncul kalo Genie's Mode -->
 		<div class="container container-upload">
 				<div class="center-title">
-					<h2>Upload Your Wish</h2>
+					<h2>Upload Your Product</h2>
 				</div>
 				<div class="center-title">
 					<button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">Click Here!</button>
