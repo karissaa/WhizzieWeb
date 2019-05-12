@@ -1,0 +1,2 @@
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('/assets/css/style_login.css'); ?>">
+<!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url('/assets/css/style_login.scss'); ?>"> -->

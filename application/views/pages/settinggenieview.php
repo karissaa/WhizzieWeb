@@ -75,10 +75,11 @@
 				<div style="background: rgba(0, 0, 0, 0.75); padding: 20px; width: 250px; border-radius: 20px; margin-left: auto; margin-right: auto; ">
 					<img src="../../assets/img/gigi.jpg" alt="" style="border-radius: 75px; object-fit: cover; width: 150px; height: 150px;"/>
 					<h3 style="padding-top: 20px; color: white;">Felicia Karissa</h3>
-					<div></div>
-						<a class="cta-btn primary-btn" style="background: orange;"><b>GENIE'S MODE</b></a>
-						<a  href="<?=base_url("index.php/SettingWisher/index"); ?>" class="btn"><i class="fa fa-cog" style="color:white;"></i></a>
-					</div>
+					
+                </div>
+                <div>
+                    <button>He</button>
+                    <button>He</button>
 				</div>
 			</div>
 
