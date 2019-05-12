@@ -131,8 +131,7 @@
                 )); 
             });
 
-            // Initiate Featured Genies Array
-            let featuredGenies = [];
+            
 
             dbrf.ref('featured/featuredGenies').on('value', function(snapshot){
                 // Get Genies that are featured
@@ -146,6 +145,9 @@
                 function isFeaturedGenie(genie){
                     return featuredGenieKeys.includes(genie.uid);
                 }
+
+                // Initiate Featured Genies Array
+                let featuredGenies = [];
 
                 featuredGenies = genies.filter(isFeaturedGenie);
 
@@ -170,42 +172,42 @@
                     featuredGenieElement.setAttribute("aria-hidden", "false");
                     featuredGenieElement.setAttribute("style", "width: 258px;");
 
-                    let productRefPath;
+                    let profileRefPath;
+                    let profPic;
 
-                    dbrf.ref('products/' + featuredGenies[i].toko.prodList[0] + '/pictureProduct').once('value').then(function(dataSS){                        
-                        if(dataSS.val() != '')
-                            productRefPath = 'products/' + dataSS.val(); 
-                        else 
-                            productRefPath = 'whizzie_assets/empty/empty.jpg';
+                    if(featuredGenies[i].profilePic == '' || featuredGenies[i].profilePic == null)
+                        profileRefPath = 'whizzie_assets/empty/empty_profile.jpg';
+                    else 
+                        profileRefPath = 'users/' + featuredGenies[i].profilePic;
 
-                        // Get an image of an uploaded product
-                        strf.ref(productRefPath).getDownloadURL().then(function(url_product_picture){
-                            productPic = url_product_picture;
+                    // Fetch profile Picture
+                    strf.ref(profileRefPath).getDownloadURL().then(function(url_profile_picture){
+                        profPic = url_profile_picture;
 
-                            let profileRefPath;
+                        // Images a bit unstable (?)
+                        dbrf.ref('products/' + featuredGenies[i].toko.prodList[0] + '/pictureProduct').once('value').then(function(dataSS){                        
+                            let productRefPath;                    
+                            
+                            if(dataSS.val() == '' || dataSS.val() == null) productRefPath = 'whizzie_assets/empty/empty.jpg';
+                            else productRefPath = 'products/' + dataSS.val(); 
+                            
+                            // Get an image of an uploaded product
+                            strf.ref(productRefPath).getDownloadURL().then(function(url_product_picture){
+                                productPic = url_product_picture;
 
-                            if(featuredGenies[i].profilePic == '' || featuredGenies[i].profilePic == null)
-                                profileRefPath = 'whizzie_assets/empty/empty_profile.jpg';
-                            else 
-                                profileRefPath = 'users/' + featuredGenies[i].profilePic;
-
-                            // Fetch profile Picture
-                            strf.ref(profileRefPath).getDownloadURL().then(function(url_profile_picture){
-                                profPic = url_profile_picture;
-                                
-                                featuredGenieElement.innerHTML = '<div class="product-img">' +
-                                                            '<img src="' + productPic + '" alt="" style="object-fit: cover; width: 258px; height: 258px;">' +
-                                                            '<div class="product-label" >' +
-                                                                '<img src="' + profPic + '" alt="" style="background: white; padding: 3px; border-radius: 62px; margin-left: auto; margin-right: 53px;margin-top: 100px;">' +
-                                                            '</div>' +
-                                                        '</div>' +
-                                                        '<div class="product-body">' +
-                                                            '<h3 class="product-name" style = "height: 30px;"> <a href="#"> ' + (featuredGenies[i].toko.name.length > 40 ? featuredGenies[i].toko.name.substring(0,40) + '...' : featuredGenies[i].toko.name) + ' </a> </h3>' +
-                                                            '<p class="product-category" style = "height:30px;"> ' + (featuredGenies[i].toko.desc.length > 40 ? featuredGenies[i].toko.desc.substring(0,40) + '...' : featuredGenies[i].toko.desc) +  ' </p>' +
-                                                        '</div>' +
-                                                        '<div class="add-to-cart">' + 
-                                                            '<button class="add-to-cart-btn"> <i class="fa fa-user"></i> Visit Profile </button>' +
-                                                        '</div>';
+                                featuredGenieElement.innerHTML =    '<div class="product-img">' +
+                                                                        '<img src="' + productPic + '" alt="" style="object-fit: cover; width: 258px; height: 258px;">' +
+                                                                        '<div class="product-label" >' +
+                                                                            '<img src="' + profPic + '" alt="" style="background: white; padding: 3px; border-radius: 62px; margin-left: auto; margin-right: 53px;margin-top: 100px;">' +
+                                                                        '</div>' +
+                                                                    '</div>' +
+                                                                    '<div class="product-body">' +
+                                                                        '<h3 class="product-name" style = "height: 30px;"> <a href="#"> ' + (featuredGenies[i].toko.name.length > 40 ? featuredGenies[i].toko.name.substring(0, 40) + '...' : featuredGenies[i].toko.name) + ' </a> </h3>' +
+                                                                        '<p class="product-category" style = "height:30px;"> ' + (featuredGenies[i].toko.desc.length > 55 ? featuredGenies[i].toko.desc.substring(0, 55) + '...' : featuredGenies[i].toko.desc) +  ' </p>' +
+                                                                    '</div>' +
+                                                                    '<div class="add-to-cart">' + 
+                                                                        '<button class="add-to-cart-btn"> <i class="fa fa-user"></i> Visit Profile </button>' +
+                                                                    '</div>';
 
                                 subSubSection.appendChild(featuredGenieElement);
                             });

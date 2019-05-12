@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Login/Registration Form Transition</title>
+  <title>Whizzie | Login</title>
   
   
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
@@ -26,11 +26,7 @@
 
 <div class="cont">
   <div class="form sign-in" >
-      <br><br><br><br><br>
-      <div style="text-align:center;">
-        <img src="<?=base_url("assets/img/logo_new_square.png")?>" alt="" style="object-fit: cover; height: 150px;">
-      </div>
-      <br><br>
+    <br><br><br><br><br><br>
     <h2>Sign In</h2>
     <label>
       <span>Email</span>
@@ -43,10 +39,17 @@
     <p class="forgot-pass">Forgot password?</p>
     <br><br>
     <div style="text-align:center;">
-    <a class="primary-btn cta-btn">Sign In</a>
-      </div>
-    
+      <a class="primary-btn cta-btn">Sign In</a>
+    </div>
+    <br><br><br><br><br><br><br><br>
+    <div style="text-align:center;padding: 20px; border-radius:20px;">
+        <a href="<?=base_url()?>">
+          <h4>I wanted to explore first!</h4><br>
+          <img src="<?=base_url("assets/img/logo_new_square.png")?>" alt="" style="object-fit: cover; height: 150px;">
+        </a>
+    </div>
   </div>
+
   <div class="sub-cont">
     <div class="img">
       <div class="img__text m--up">
@@ -63,14 +66,10 @@
       </div>
     </div>
     <div class="form sign-up">
-        <br><br><br><br><br>
-      <div style="text-align:center;">
-        <img src="<?=base_url("assets/img/logo_new_square.png")?>" alt="" style="object-fit: cover; height: 150px;">
-      </div>
-      <br><br>
+      <br><br><br><br><br><br>
       <h2>Sign Up</h2>
       <label>
-        <span>Name</span>
+        <span>Full Name</span>
         <input type="text" />
       </label>
       <label>
@@ -81,10 +80,24 @@
         <span>Password</span>
         <input type="password" />
       </label>
+      <label>
+        <span>Confirm Password</span>
+        <input type="password" />
+      </label>
       <br><br>
-        <div style="text-align:center;">
+      <div style="text-align:center;">
         <a class="primary-btn cta-btn">Sign Up</a>
       </div>
+
+      <br><br>
+      
+      <div style="text-align:center;padding: 20px; border-radius:20px;">
+          <a href="<?=base_url()?>">
+            <h4>I wanted to explore first!</h4><br>
+            <img src="<?=base_url("assets/img/logo_new_square.png")?>" alt="" style="object-fit: cover; height: 150px;">
+          </a>
+      </div>
+
     </div>
   </div>
 </div>

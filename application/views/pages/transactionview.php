@@ -11,7 +11,7 @@
  		<!-- Google font -->
  		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 
-		 <?=$css?>
+		<?=$css?>
 		<?=$firebase?>
 		
 		<?=$js_classes?>
@@ -109,7 +109,7 @@
 								<p>No. Resi: BDG393092</p>
 							</div>
 							<div class="col-sm-2">
-								<button type="button" class="btn btn-danger">Sudah Bayar</button>
+								<button type="button" class="btn btn-danger" onclick="showModalTransaction()" id="modalTransactionShow">Sudah Bayar</button>
 							</div>
 						</div>
 
@@ -147,6 +147,97 @@
 						<!-- /Untuk barang dalam toko -->
 						</div>
 					<!-- / Untuk per toko -->
+
+
+					<!-- Modal Transaksi -->
+					<div class="modal" role="dialog" id="modalTransaction">
+						<div class="modal-dialog">
+							<div class="modal-content" role="document">
+								<div class="modal-header">
+									<h5 class="modal-title">Transaction</h5> 
+								</div>
+								<div class="modal-body">
+									<div class="form-group">
+										<label for="">Input Nomor Resi: </label>
+										<input type="text" class="form-control" value="" id="nomorResi">
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-submit">Save</button>
+									<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /Modal Transaksi -->
+
+					<!-- Modal Berhasil -->
+					<div class="modal" role="dialog" id="modalTransactionSuccess">
+						<div class="modal-dialog">
+							<div class="modal-content" role="document">
+								<div class="modal-header">
+									<h5 class="modal-title">Transaction Success</h5> 
+								</div>
+								<div class="modal-body">
+									<div class="form-group">
+										<label for="">Transaksi anda Berhasil! Barang Akan segera dikirim.</label>
+										<label for="" id="transactionSuccessID">ID transaksi : ABC123</label>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-submit">Save</button>
+									<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /Modal Berhasil -->
+
+					<!-- Modal Checkout -->
+					<div class="modal" role="dialog" id="modalCheckoutSuccess">
+						<div class="modal-dialog">
+							<div class="modal-content" role="document">
+								<div class="modal-header">
+									<h5 class="modal-title">Checkout</h5> 
+								</div>
+								<div class="modal-body">
+									<div class="form-group">
+										<label for="">Checkout Berhasil Dengan:  </label>
+										<label for="checkoutTransactionID" id="checkoutTransactionID">Transaction ID: ABC123</label>
+										<label for="" id="checkoutTotalPrice">Total Price : Rp. 180.000</label>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-submit">Save</button>
+									<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /Modal Checkout -->
+
+					<!-- Modal Transaction Finished -->
+					<div class="modal" role="dialog" id="modalTransactionFinished">
+						<div class="modal-dialog">
+							<div class="modal-content" role="document">
+								<div class="modal-header">
+									<h5 class="modal-title">Transaction Finish</h5> 
+								</div>
+								<div class="modal-body">
+									<div class="form-group">
+										<label for="">Transaksi anda sudah Selesai!</label>
+										<label for="checkoutTransactionID" id="checkoutTransactionID">Transaction ID: ABC123</label>
+										<label for="" id="checkoutTotalPrice">Total Price : Rp. 180.000</label>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-submit">Save</button>
+									<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /Modal Transaction Finished -->
 
 					<br>
 
@@ -199,5 +290,11 @@
 		
 		<!-- FOOTER -->
 		<?=$footer?>
+
+		<script>
+			function showModalTransaction(){
+				$('#modalTransactionFinished').modal("show");
+			}
+		</script>
 	</body>
 </html>

@@ -54,7 +54,7 @@
 
     class Users{
         constructor(uid, name, email, backgroundPic, profilePic, storeAddress, alamat, toko){
-            this.uid = uid                       // Key
+            this.uid = uid                   // Key
             this.name = name;
             this.email = email;
             this.backgroundPic = backgroundPic;

@@ -1,5 +1,6 @@
 <script>
-    let wishesArr = []
+    let wishesArr = [];
+    let categories = [];
 
     // Assign Onload Function
     document.onready = function(){init()};
@@ -68,6 +69,41 @@
                         latestWishSection.appendChild(wish);
                     });
                 });
+            }
+        });
+
+        // Populate Categories Array
+        dbrf.ref('categories').once('value').then(function(cats){
+            cats.forEach(function(category){
+                categories.push(new Category(category.key, category.child('imageID').val()));
+            });
+
+            let iteration = categories.length;
+
+            // Populating Category Input Dropdown
+            let categoryInputSection = document.getElementById("categoryInputs");
+            categoryInputSection.innerHTML = '';
+
+            // Populating Category Filters
+            let categoryFilterSection = document.getElementById("categoryFilter");
+            categoryFilterSection.innerHTML = '';
+
+            for(let i = 0; i < iteration; i++){
+                let categoryInput = document.createElement('li');
+                categoryInput.innerHTML = '<a>' + categories[i].name + '</a>';
+
+                categoryInputSection.appendChild(categoryInput);
+
+                let categoryFilter = document.createElement('div');
+                categoryFilter.setAttribute('class', 'input-checkbox');
+
+                categoryFilter.innerHTML =  '<input type="checkbox" id="' + categories[i].name +  '">' +
+                                            '<label for="' + categories[i].name + '">' +
+                                                '<span></span>' +
+                                                categories[i].name +
+                                            '</label>';
+
+                categoryFilterSection.appendChild(categoryFilter);
             }
         });
     }

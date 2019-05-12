@@ -147,7 +147,6 @@
 					
 					<!-- Untuk Alamat -->
 					<div class="row" style="background-color: white; border-radius: 25px; padding: 20px;margin:1px;margin-bottom:5px;">
-					
 						<div class="row">
 							<div class="col-sm-4">
 								<h4>Alamat Rumah</h4>
@@ -168,9 +167,10 @@
 								<p>+62 815 880 888</p>
 							</div>
 							<div class="col-sm-2">
-								<button type="button" class="btn btn-info">Edit Address</button>
+								<button type="button" class="btn btn-info" id="editUserAddress" onclick = "showModal()">Edit Address</button>
 							</div>
 						</div>
+
 					</div>
 					<!-- /Untuk Alamat -->
 
@@ -206,6 +206,47 @@
 
 
                 </div>
+
+				<!-- Modal Edit Address -->
+				<div class="modal" role="dialog" id="modalAddress">
+					<div class="modal-dialog">
+						<div class="modal-content" role="document">
+							<div class="modal-header">
+								<h5 class="modal-title">Change Address</h5> 
+							</div>
+							<div class="modal-body">
+								<div class="form-group">
+									<label for="">City Name: </label>
+									<input type="text" class="form-control" value="" id="newAddressCity">
+								</div>
+								<div class="form-group">
+									<label for="">Detail Address: </label>
+									<input type="text" class="form-control" id="newAddressDetail">
+								</div>
+								<div class="form-group">
+									<label for="">Phone Number: </label>
+									<input type="text" class="form-control" id="newAddressPhoneNumber">
+								</div>
+								<div class="form-group">
+									<label for="">Postal Code: </label>
+									<input type="text" class="form-control" id="newAddressPostalCode">
+								</div>
+								<div class="form-group">
+									<label for="">Province Name: </label>
+									<input type="text" class="form-control" id="newAddressProvinceName">
+								</div>
+								<div class="form-group">
+									<label for="">Receiver Name: </label>
+									<input type="text" class="form-control" id="newAddressReceiverName">
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-submit">Save</button>
+								<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<!-- Ganti Alamat -->
 
@@ -221,4 +262,14 @@
 		<!-- FOOTER -->
 		<?=$footer?>
 	</body>
+	
+	<script>
+		function showModal(){
+			$('#modalAddress').modal("show")
+		}
+
+		// $(document).ready(function(){
+        //     $('#editUserAddress').on("click", )
+    	// });
+	</script>
 </html>

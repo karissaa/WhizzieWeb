@@ -1,4 +1,4 @@
-<!-- TODO: add TODOS -->
+<!-- TODO: Setup Page Links -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,15 +27,244 @@
 				<div class="row" style="height:450px;">
 					<div class="col-md-12" style="margin-top:180px;">
 						<div class="hot-deal" style="">
-							<h2 class="text-uppercase">Grant your wish now!</h2>
-							<p>New Collection Up to 50% OFF</p>
-							<a class="primary-btn cta-btn" href="<?=base_url("index.php/Wishes/index"); ?>">WISH!</a>
+							<h2 class="text-uppercase">With over 1,000 Genies</h2>
+							<p>Ready to make your wish come true</p>
+							<a class="primary-btn cta-btn" href="<?=base_url("index.php/Wishes/index"); ?>">POST A WISH NOW!</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
+		<!-- CATEGORIES -->
+		<div class="section">
+			<div class="container" style="padding:25px; padding-bottom:70px;">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="section-title">
+							<h3 class="title"> Categories </h3>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="section-title">
+							<h3 class="title"> Categories </h3>
+						</div>
+					</div>
+
+
+					<div class="col-md-6">
+						<div class="row">
+							<div class="products-tabs">
+								<div id="tab1" class="tab-pane fade in active">
+									<div class="products-slick" data-nav="#slick-nav-1">
+
+										<!-- Categories -->
+										<div class="col" >
+											<div class="product" style="width:130px; display: inline-block">
+												<div class="product-img">
+													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
+												</div>
+											</div>
+										</div>
+										<!-- Categories -->
+
+										<!-- Categories -->
+										<div class="col" >
+											<div class="product" style="width:130px; display: inline-block">
+												<div class="product-img">
+													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
+												</div>
+											</div>
+										</div>
+										<!-- Categories -->
+
+										<!-- Categories -->
+										<div class="col" >
+											<div class="product" style="width:130px; display: inline-block">
+												<div class="product-img">
+													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
+												</div>
+											</div>
+										</div>
+										<!-- Categories -->
+
+										<!-- Categories -->
+										<div class="col" >
+											<div class="product" style="width:130px; display: inline-block">
+												<div class="product-img">
+													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
+												</div>
+											</div>
+										</div>
+										<!-- Categories -->
+
+										<!-- Categories -->
+										<div class="col" >
+											<div class="product" style="width:130px; display: inline-block">
+												<div class="product-img">
+													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
+												</div>
+											</div>
+										</div>
+										<!-- Categories -->
+
+										<!-- Categories -->
+										<div class="col" >
+											<div class="product" style="width:130px; display: inline-block">
+												<div class="product-img">
+													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
+												</div>
+											</div>
+										</div>
+										<!-- Categories -->
+
+										<!-- Categories -->
+										<div class="col" >
+											<div class="product" style="width:130px; display: inline-block">
+												<div class="product-img">
+													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
+												</div>
+											</div>
+										</div>
+										<!-- Categories -->
+
+									</div>
+									<div id="slick-nav-1" class="products-slick-nav"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="row">
+							<div class="products-tabs">
+								<div id="tab1" class="tab-pane fade in active">
+									<div class="products-slick" data-nav="#slick-nav-1">
+
+										<!-- Categories -->
+										<div class="col" >
+											<div class="product" style="width:130px; display: inline-block">
+												<div class="product-img">
+													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
+												</div>
+											</div>
+										</div>
+										<!-- Categories -->
+
+										<!-- Categories -->
+										<div class="col" >
+											<div class="product" style="width:130px; display: inline-block">
+												<div class="product-img">
+													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
+												</div>
+											</div>
+										</div>
+										<!-- Categories -->
+
+										<!-- Categories -->
+										<div class="col" >
+											<div class="product" style="width:130px; display: inline-block">
+												<div class="product-img">
+													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
+												</div>
+											</div>
+										</div>
+										<!-- Categories -->
+
+										<!-- Categories -->
+										<div class="col" >
+											<div class="product" style="width:130px; display: inline-block">
+												<div class="product-img">
+													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
+												</div>
+											</div>
+										</div>
+										<!-- Categories -->
+
+										<!-- Categories -->
+										<div class="col" >
+											<div class="product" style="width:130px; display: inline-block">
+												<div class="product-img">
+													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
+												</div>
+											</div>
+										</div>
+										<!-- Categories -->
+
+										<!-- Categories -->
+										<div class="col" >
+											<div class="product" style="width:130px; display: inline-block">
+												<div class="product-img">
+													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
+												</div>
+											</div>
+										</div>
+										<!-- Categories -->
+
+										<!-- Categories -->
+										<div class="col" >
+											<div class="product" style="width:130px; display: inline-block">
+												<div class="product-img">
+													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
+												</div>
+											</div>
+										</div>
+										<!-- Categories -->
+
+									</div>
+									<div id="slick-nav-1" class="products-slick-nav"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+		<!-- / CATEGORIES -->
 
 		<!-- LATEST TOP 3 WISHES -->
 		<div class="section">
@@ -52,6 +281,10 @@
 			</div>
 		</div>
 
+
+		
+
+
 		<!-- FEATURED GENIES -->
 		<div class="section">
 			<div class="container" style="background:#f3fcff; padding:25px; padding-bottom:70px;">
@@ -66,57 +299,7 @@
 							<div class="products-tabs">
 								<div id="tab1" class="tab-pane fade in active">
 									<div class="products-slick" data-nav="#slick-nav-1" id = "featuredGenies">
-										<!-- product  -->
-										<div class="product">
-											<div class="product-img" >
-												<img src="./assets/img/009.jpg" alt="">
-												<div class="product-label" style="background: white; padding: 3px; border-radius: 62px; margin-left: auto; margin-right: 53px;margin-top: 100px;">
-													<img src="./assets/img/gigi.jpg" alt="" style="border-radius: 59px; padding:10px; object-fit: cover; width: 120px; height: 120px; text-align:center;">
-												</div>
-											</div>
-											<div class="product-body">
-												<h3 class="product-name"><a href="#">Gigi Fashion Store</a></h3>
-												<p class="product-category">We sell incredible stuffs!</p>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-user"></i>Visit Profile</button>
-											</div>
-										</div>
-										<!-- /product -->
-										<!-- product  -->
-										<div class="product">
-											<div class="product-img" >
-												<img src="./assets/img/009.jpg" alt="">
-												<div class="product-label" style="background: white; padding: 3px; border-radius: 62px; margin-left: auto; margin-right: 53px;margin-top: 100px;">
-													<img src="./assets/img/gigi.jpg" alt="" style="border-radius: 59px; padding:10px; object-fit: cover; width: 120px; height: 120px; text-align:center;">
-												</div>
-											</div>
-											<div class="product-body">
-												<h3 class="product-name"><a href="#">Gigi Fashion Store</a></h3>
-												<p class="product-category">We sell incredible stuffs!</p>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-user"></i>Visit Profile</button>
-											</div>
-										</div>
-										<!-- /product -->
-										<!-- product  -->
-										<div class="product">
-											<div class="product-img" >
-												<img src="./assets/img/009.jpg" alt="">
-												<div class="product-label" style="background: white; padding: 3px; border-radius: 62px; margin-left: auto; margin-right: 53px;margin-top: 100px;">
-													<img src="./assets/img/gigi.jpg" alt="" style="border-radius: 59px; padding:10px; object-fit: cover; width: 120px; height: 120px; text-align:center;">
-												</div>
-											</div>
-											<div class="product-body">
-												<h3 class="product-name"><a href="#">Gigi Fashion Store</a></h3>
-												<p class="product-category">We sell incredible stuffs!</p>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-user"></i>Visit Profile</button>
-											</div>
-										</div>
-										<!-- /product -->
+
 									</div>
 									<div id="slick-nav-1" class="products-slick-nav"></div>
 								</div>
@@ -143,45 +326,7 @@
 							<div class="products-tabs">
 								<div id="tab2" class="tab-pane fade in active">
 									<div class="products-slick" data-nav="#slick-nav-2" id = "featuredProducts">											
-											<div class="product">
-												<div class="product-img">
-													<img src="./assets/img/shoes.jpg" alt="">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">Balayage Shoes</a></h3>
-													<h4 class="product-price">Rp 78.000</h4>
-													<p><i class="fa fa-map-marker"></i>&nbsp&nbspJakarta Timur</p>
-												</div>
-												<div class="add-to-cart">
-													<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-												</div>
-											</div>
-											<div class="product">
-												<div class="product-img">
-													<img src="./assets/img/shoes.jpg" alt="">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">Balayage Shoes</a></h3>
-													<h4 class="product-price">Rp 78.000</h4>
-													<p><i class="fa fa-map-marker"></i>&nbsp&nbspJakarta Timur</p>
-												</div>
-												<div class="add-to-cart">
-													<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-												</div>
-											</div>
-											<div class="product">
-												<div class="product-img">
-													<img src="./assets/img/shoes.jpg" alt="">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">Balayage Shoes</a></h3>
-													<h4 class="product-price">Rp 78.000</h4>
-													<p><i class="fa fa-map-marker"></i>&nbsp&nbspJakarta Timur</p>
-												</div>
-												<div class="add-to-cart">
-													<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-												</div>
-											</div>
+
 									</div>
 									<div id="slick-nav-2" class="products-slick-nav"></div>
 								</div>
@@ -192,9 +337,10 @@
 			</div>
 		</div>
 
-		<?=$js?>
 		
 		<!-- FOOTER -->
 		<?=$footer?>
+		
+		<?=$js?>
 	</body>
 </html>

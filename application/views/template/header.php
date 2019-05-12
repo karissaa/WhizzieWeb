@@ -9,12 +9,7 @@
                     <ul class="header-links pull-left">
                         <li>
                             <a href="<?php echo base_url("index.php/Login/index"); ?>">
-                                <i class="fa fa-home"></i> Login
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo base_url("index.php/DetailWish/index"); ?>">
-                                <i class="fa fa-home"></i> Detail Wish
+                                <i class="fa fa-user"></i>Sign In | Sign Up
                             </a>
                         </li>
                     </ul>
@@ -27,13 +22,75 @@
                         </li>
                         <li>
                             <a href="<?php echo base_url("index.php/Profile/index"); ?>" id = "userName">
-                                <i class="fa fa-user-o"></i> My Account | <b>Wisher's Mode</b>
+                                <i class="fa fa-user"></i> My Account | <b>Guest</b>
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url("index.php/Profile/index"); ?>" id = "userName">
+                        <!-- <div class="center-title">
+                            <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">Click Here!</button>
+                        </div>
+                        <div id="demo" class="collapse"> -->
+
+
+                            <!-- <a href="<?php 
+                            // echo base_url("index.php/Profile/index"); 
+                            ?>" class="" id = "userName">
                                 <i class="fa fa-bell-o"></i> Notification 
-                            </a>
+                            </a> -->
+
+                            <!-- Cart -->
+                            <div class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                        <i class="fa fa-bell"></i>
+                                        <span>Notification</span>
+                                        <!-- TODO: Count from database -->
+                                        <!-- <div class="qty">3</div> -->
+                                    </a>
+
+                                    <div class="cart-dropdown">
+                                        <div class="cart-list">
+                                            <!-- TODO: Implement this -->
+                                            <div class="product-widget">
+                                                <div class="product-img">
+                                                    <img src="<?=base_url('/assets/img/010.jpg')?>" alt=""  style="object-fit: cover; width: 70px; height: 70px;">
+                                                </div>
+                                                <div class="product-body">
+                                                    <h3 class="product-name">You got new offer!</h3>
+                                                </div>
+                                            </div>
+
+                                            <div class="product-widget">
+                                                <div class="product-img">
+                                                    <img src="<?=base_url('/assets/img/010.jpg')?>" alt=""  style="object-fit: cover; width: 70px; height: 70px;">
+                                                </div>
+                                                <div class="product-body">
+                                                    <h3 class="product-name">You got new offer!</h3>
+                                                </div>
+                                            </div>
+
+                                            <div class="product-widget">
+                                                <div class="product-img">
+                                                    <img src="<?=base_url('/assets/img/010.jpg')?>" alt=""  style="object-fit: cover; width: 70px; height: 70px;">
+                                                </div>
+                                                <div class="product-body">
+                                                    <h3 class="product-name">You got new offer!</h3>
+                                                </div>
+                                            </div>
+
+                                            <div class="product-widget">
+                                                <div class="product-img">
+                                                    <img src="<?=base_url('/assets/img/010.jpg')?>" alt=""  style="object-fit: cover; width: 70px; height: 70px;">
+                                                </div>
+                                                <div class="product-body">
+                                                    <h3 class="product-name">You got new offer!</h3>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
                         </li>
                     </ul>
                 </div>
@@ -71,45 +128,17 @@
                         <!-- ACCOUNT -->
                         <div class="col-md-3 clearfix">
                             <div class="header-ctn">
-                                
 
-                                <!-- Transactions -->
-                                <!-- TODO: Implement This -->
 
                                 <!-- Cart -->
-                                <div class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                <!-- TODO: Implement This -->                                
+                                <div>
+                                    <a href="<?php echo base_url("index.php/Cart/index"); ?>">
                                         <i class="fa fa-shopping-cart"></i>
                                         <span>Your Cart</span>
                                         <!-- TODO: Count from database -->
                                         <div class="qty">3</div>
                                     </a>
-
-                                    <div class="cart-dropdown">
-                                        <div class="cart-list">
-                                            <!-- TODO: Implement this -->
-                                            <div class="product-widget">
-                                                <div class="product-img">
-                                                    <img src="<?=base_url('assets/img/product01.png')?>" alt="">
-                                                </div>
-                                                <div class="product-body">
-                                                    <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                                    <h4 class="product-price"><span class="qty">1x</span>$980.00</h4>
-                                                </div>
-                                                <button class="delete"><i class="fa fa-close"></i></button>
-                                            </div>
-                                        </div>
-
-                                        <div class="cart-summary">
-                                            <small>3 Item(s) selected</small>
-                                            <h5>SUBTOTAL: $2940.00</h5>
-                                        </div>
-
-                                        <div class="cart-btns">
-                                            <a href="<?php echo base_url("index.php/Cart/index"); ?>">View Cart</a>
-                                            <a href="#">Checkout <i class="fa fa-arrow-circle-right"></i></a>
-                                        </div>
-                                    </div>
                                 </div>
 
                                 <!-- Notification -->
@@ -129,6 +158,7 @@
                                         <span>Menu</span>
                                     </a>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
