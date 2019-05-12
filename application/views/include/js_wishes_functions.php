@@ -26,7 +26,7 @@
             // Initiate container Element
             let latestWishSection = document.getElementById("wishSection");
             latestWishSection.innerHTML = '';
-            
+
             let iteration = wishesArr.length;
 
             for(let i = 0; i < iteration; i++){
