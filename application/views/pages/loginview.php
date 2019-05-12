@@ -22,6 +22,8 @@
 
 <body>
 
+<div class="background-image"></div>
+
 <div class="cont">
   <div class="form sign-in" >
       <br><br><br><br><br>
