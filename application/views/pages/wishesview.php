@@ -13,7 +13,6 @@
 		<?=$js?>				
 		<?=$js_classes?>
 		<?=$js_functions?>
-
     </head>
 	<body>
 		<!-- HEADER -->
@@ -50,7 +49,7 @@
 			}
 			.container-upload {
 				border-radius: 25px;
-				background: #ccced1;
+				background: #fff6c4;
 				padding: 20px; 
 			}
 			.center-title {
@@ -75,7 +74,7 @@
 				<h2>Upload Your Wish</h2>
 			</div>
 			<div class="center-title">
-				<button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">Click Here!</button>
+				<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Click Here!</button>
 			</div>
 			<div id="demo" class="collapse">
 				<br>
@@ -95,7 +94,7 @@
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
 							<div class="dropdown">
-								<button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">Categories
+								<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Categories
 								<span class="caret"></span></button>
 								<ul class="dropdown-menu" id = "categoryInputs">
 									<!-- Bikin Foreach untuk Categories -->
@@ -113,14 +112,14 @@
 								<span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
 								<input type="text" class="form-control input-lg" disabled placeholder="Upload Image">
 								<span class="input-group-btn">
-									<button class="browse btn btn-danger input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+									<button class="browse btn btn-info input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
 								</span>
 							</div>
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
-							<button class="btn btn-danger">Upload Wish</button>
+							<button class="btn btn-info">Upload Wish</button>
 						</div>
 					</div>
 				</form>

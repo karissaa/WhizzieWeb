@@ -20,7 +20,11 @@
         }
 
         public function index(){
-            $this->load->view('pages/transactionview.php', $this->data);
+            if($this->session->userdata('user_id') !== null){
+                $this->load->view('pages/transactionview.php', $this->data);
+            } else{
+                redirect('Login/index');
+            }
         }
     }
 ?>

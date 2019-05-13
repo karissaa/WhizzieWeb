@@ -35,8 +35,8 @@
 					<div class="col-md-12">
 						<h3 class="breadcrumb-header">Shopping Cart</h3>
 						<ul class="breadcrumb-tree">
-							<li><a href="#">Home</a></li>
-							<li class="active">Blank</li>
+							<li><a href="<?php echo base_url(); ?>">Home</a></li>
+							<li class="active">Shopping Cart</li>
 						</ul>
 					</div>
 				</div>
@@ -67,14 +67,11 @@
 						<tbody>
 							<tr>
 								<td style="text-align:center; vertical-align:middle;">
-									<div class="form-check">
-										<label class="form-check-label">
-											<input type="checkbox" class="form-check-input" value="">
-										</label>
-									</div>
 								</td>
 								<td colspan="5"><b>Toko PT Sejahtera</b></td>
 							</tr>
+
+							<!-- product -->
 							<tr>
 								<td style="text-align:center; vertical-align:middle;">
 								<div class="form-check">
@@ -88,6 +85,7 @@
 										<img src="../../assets/img/item-3.png" alt="" />
 									</div>
 								</td>
+								
 								<td>
 									<h6 class="title text-truncate">Product name goes here </h6>
 									<dl class="param param-inline small">
@@ -99,13 +97,9 @@
 										<dd>Orange color</dd>
 									</dl>
 								</td>
-								<td> 
-									<select class="form-control">
-										<option>1</option>
-										<option>2</option>	
-										<option>3</option>	
-										<option>4</option>	
-									</select> 
+								
+								<td style="width:30px;"> 
+									<input type="number" class="form-control" />
 								</td>
 								<td> 
 									<div class="price-wrap"> 
@@ -114,10 +108,148 @@
 									</div> <!-- price-wrap .// -->
 								</td>
 								<td class="text-right"> 
-								<a title="" href="" class="btn btn-outline-success" data-toggle="tooltip" data-original-title="Save to Wishlist"> <i class="fa fa-heart"></i></a> 
 								<a href="" class="btn btn-danger">Remove</a>
 								</td>
 							</tr>
+
+							<!-- / product -->
+
+							<!-- product -->
+							<tr>
+								<td style="text-align:center; vertical-align:middle;">
+								<div class="form-check">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" value="">
+									</label>
+								</div>
+								</td>
+								<td>
+									<div class="image">
+										<img src="../../assets/img/item-3.png" alt="" />
+									</div>
+								</td>
+								
+								<td>
+									<h6 class="title text-truncate">Product name goes here </h6>
+									<dl class="param param-inline small">
+										<dt>Size: </dt>
+										<dd>XXL</dd>
+									</dl>
+									<dl class="param param-inline small">
+										<dt>Color: </dt>
+										<dd>Orange color</dd>
+									</dl>
+								</td>
+								
+								<td width="20px"> 
+									<input type="number" class="form-control" />
+								</td>
+								<td> 
+									<div class="price-wrap"> 
+										<var class="price">Rp. 15.000</var> 
+										<small class="text-muted">(Rp. 5.000 each)</small> 
+									</div> <!-- price-wrap .// -->
+								</td>
+								<td class="text-right"> 
+								<a href="" class="btn btn-danger">Remove</a>
+								</td>
+							</tr>
+
+							<!-- / product -->
+
+							<tr>
+								<td style="text-align:center; vertical-align:middle;">
+								</td>
+								<td colspan="5"><b>Toko Sahabat</b></td>
+							</tr>
+
+							<!-- product -->
+							<tr>
+								<td style="text-align:center; vertical-align:middle;">
+								<div class="form-check"></div>
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" value="">
+									</label>
+								</div>
+								</td>
+								<td>
+									<div class="image">
+										<img src="../../assets/img/item-3.png" alt="" />
+									</div>
+								</td>
+								
+								<td>
+									<h6 class="title text-truncate">Product name goes here </h6>
+									<dl class="param param-inline small">
+										<dt>Size: </dt>
+										<dd>XXL</dd>
+									</dl>
+									<dl class="param param-inline small">
+										<dt>Color: </dt>
+										<dd>Orange color</dd>
+									</dl>
+								</td>
+								
+								<td style="width:30px;"> 
+									<input type="number" class="form-control" />
+								</td>
+								<td> 
+									<div class="price-wrap"> 
+										<var class="price">Rp. 15.000</var> 
+										<small class="text-muted">(Rp. 5.000 each)</small> 
+									</div> <!-- price-wrap .// -->
+								</td>
+								<td class="text-right"> 
+								<a href="" class="btn btn-danger">Remove</a>
+								</td>
+							</tr>
+
+							<!-- / product -->
+
+							<!-- product -->
+							<tr>
+								<td style="text-align:center; vertical-align:middle;">
+								<div class="form-check">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" value="">
+									</label>
+								</div>
+								</td>
+								<td>
+									<div class="image">
+										<img src="../../assets/img/item-3.png" alt="" />
+									</div>
+								</td>
+								
+								<td>
+									<h6 class="title text-truncate">Product name goes here </h6>
+									<dl class="param param-inline small">
+										<dt>Size: </dt>
+										<dd>XXL</dd>
+									</dl>
+									<dl class="param param-inline small">
+										<dt>Color: </dt>
+										<dd>Orange color</dd>
+									</dl>
+								</td>
+								
+								<td style="width:30px;"> 
+									<input type="number" class="form-control" />
+								</td>
+								<td> 
+									<div class="price-wrap"> 
+										<var class="price">Rp. 15.000</var> 
+										<small class="text-muted">(Rp. 5.000 each)</small> 
+									</div> <!-- price-wrap .// -->
+								</td>
+								<td class="text-right"> 
+								<a href="" class="btn btn-danger">Remove</a>
+								</td>
+							</tr>
+
+							<!-- / product -->
+
+
 						</tbody>
 					</table>
 				</div>
@@ -136,7 +268,7 @@
 						<div><h3>Total Rp. 182.900,-</h3>12 Items</div>
 					</div>
 					<div class="col-sm-2" style="text-align:center; vertical-align:middle;">
-						<button class="btn btn-danger">Check Out</button>
+						<button class="btn btn-info">Check Out</button>
 					</div>
 				</div>
 				<!-- / Check Out Bar -->

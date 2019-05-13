@@ -1,95 +1,74 @@
 <div class="header">
-	 
 	 <div class="navbar" id='nav'>
-
         <header>
             <!-- LEFT HEADER -->
             <div id="nav navbar-fixed-top">
                 <div class="container">
                     <ul class="header-links pull-left">
                         <li>
-                            <a href="<?php echo base_url("index.php/Login/index"); ?>">
-                                <i class="fa fa-user"></i>Sign In | Sign Up
+                            <a href="<?php echo base_url("index.php/Login/index"); ?>" id = "signButton">
+                                <i class="fa fa-user"></i> 
                             </a>
                         </li>
                     </ul>
                     <ul class="header-links pull-right">
-                        
-                        <li>
-                            <a href="<?php echo base_url("index.php/Transaction/index"); ?>" id = "userName">
-                                <i class="fa fa-sticky-note"></i> Transaction 
-                            </a>
-                        </li>
                         <li>
                             <a href="<?php echo base_url("index.php/Profile/index"); ?>" id = "userName">
-                                <i class="fa fa-user"></i> My Account | <b>Guest</b>
+                                <i class="fa fa-user"></i> My Account | <b id = "accountUsername">  </b>
                             </a>
                         </li>
                         <li>
-                        <!-- <div class="center-title">
-                            <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">Click Here!</button>
-                        </div>
-                        <div id="demo" class="collapse"> -->
-
-
-                            <!-- <a href="<?php 
-                            // echo base_url("index.php/Profile/index"); 
-                            ?>" class="" id = "userName">
-                                <i class="fa fa-bell-o"></i> Notification 
-                            </a> -->
 
                             <!-- Cart -->
                             <div class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-                                        <i class="fa fa-bell"></i>
-                                        <span>Notification</span>
-                                        <!-- TODO: Count from database -->
-                                        <!-- <div class="qty">3</div> -->
-                                    </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                    <i class="fa fa-bell"></i>
+                                    <span>Notification</span>
+                                    <!-- TODO: Count from database -->
+                                    <!-- <div class="qty">3</div> -->
+                                </a>
 
-                                    <div class="cart-dropdown">
-                                        <div class="cart-list">
-                                            <!-- TODO: Implement this -->
-                                            <div class="product-widget">
-                                                <div class="product-img">
-                                                    <img src="<?=base_url('/assets/img/010.jpg')?>" alt=""  style="object-fit: cover; width: 70px; height: 70px;">
-                                                </div>
-                                                <div class="product-body">
-                                                    <h3 class="product-name">You got new offer!</h3>
-                                                </div>
+                                <div class="cart-dropdown">
+                                    <div class="cart-list">
+                                        <!-- TODO: Implement this -->
+                                        <div class="product-widget">
+                                            <div class="product-img">
+                                                <img src="<?=base_url('/assets/img/010.jpg')?>" alt=""  style="object-fit: cover; width: 70px; height: 70px;">
                                             </div>
-
-                                            <div class="product-widget">
-                                                <div class="product-img">
-                                                    <img src="<?=base_url('/assets/img/010.jpg')?>" alt=""  style="object-fit: cover; width: 70px; height: 70px;">
-                                                </div>
-                                                <div class="product-body">
-                                                    <h3 class="product-name">You got new offer!</h3>
-                                                </div>
+                                            <div class="product-body">
+                                                <h3 class="product-name">You got new offer!</h3>
                                             </div>
-
-                                            <div class="product-widget">
-                                                <div class="product-img">
-                                                    <img src="<?=base_url('/assets/img/010.jpg')?>" alt=""  style="object-fit: cover; width: 70px; height: 70px;">
-                                                </div>
-                                                <div class="product-body">
-                                                    <h3 class="product-name">You got new offer!</h3>
-                                                </div>
-                                            </div>
-
-                                            <div class="product-widget">
-                                                <div class="product-img">
-                                                    <img src="<?=base_url('/assets/img/010.jpg')?>" alt=""  style="object-fit: cover; width: 70px; height: 70px;">
-                                                </div>
-                                                <div class="product-body">
-                                                    <h3 class="product-name">You got new offer!</h3>
-                                                </div>
-                                            </div>
-
                                         </div>
 
+                                        <div class="product-widget">
+                                            <div class="product-img">
+                                                <img src="<?=base_url('/assets/img/010.jpg')?>" alt=""  style="object-fit: cover; width: 70px; height: 70px;">
+                                            </div>
+                                            <div class="product-body">
+                                                <h3 class="product-name">You got new offer!</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-widget">
+                                            <div class="product-img">
+                                                <img src="<?=base_url('/assets/img/010.jpg')?>" alt=""  style="object-fit: cover; width: 70px; height: 70px;">
+                                            </div>
+                                            <div class="product-body">
+                                                <h3 class="product-name">You got new offer!</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-widget">
+                                            <div class="product-img">
+                                                <img src="<?=base_url('/assets/img/010.jpg')?>" alt=""  style="object-fit: cover; width: 70px; height: 70px;">
+                                            </div>
+                                            <div class="product-body">
+                                                <h3 class="product-name">You got new offer!</h3>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
                                 
                         </li>
                     </ul>
@@ -128,8 +107,6 @@
                         <!-- ACCOUNT -->
                         <div class="col-md-3 clearfix">
                             <div class="header-ctn">
-
-
                                 <!-- Cart -->
                                 <!-- TODO: Implement This -->                                
                                 <div>
@@ -144,11 +121,11 @@
                                 <!-- Notification -->
                                 <!-- TODO: Implement This -->                                
                                 <div>
-                                    <a href="#">
-                                        <i class="fa fa-comments-o"></i>
-                                        <span> Chat </span>
+                                    <a href="<?php echo base_url("index.php/Transaction/index"); ?>">
+                                        <i class="fa fa-sticky-note"></i>
+                                        <span> Transactions </span>
                                         <!-- Count from Database -->
-                                        <div class="qty">2</div>
+                                        <div class="qty"> 2 </div>
                                     </a>
                                 </div>
 
@@ -158,7 +135,6 @@
                                         <span>Menu</span>
                                     </a>
                                 </div>
-                                
                             </div>
                         </div>
                     </div>
@@ -170,7 +146,6 @@
 
 
 <!-- add some javascript code -->
-
 <script type="text/javascript">
     var  nav = document.getElementById('nav');
     
@@ -186,8 +161,17 @@
             nav.style.boxShadow = "none";
         }
     }
-</script>
 
+    <?php
+        if($this->session->user_id === null){
+            echo 'document.getElementById("accountUsername").innerHTML = "Guest";';
+            echo 'document.getElementById("signButton").innerHTML = \'<i class="fa fa-user"></i> Sign In | Sign Up\';';
+        } else {
+            echo 'dbrf.ref("users/' .  $this->session->user_id . '/name").once("value").then(function(dataSnapshot){document.getElementById("accountUsername").innerHTML = dataSnapshot.val();});';
+            echo 'document.getElementById("signButton").innerHTML = \'<i class="fa fa-user"></i>  Sign Out\';';
+        }
+    ?>
+</script>
 
 <style type="text/css">
     *{

@@ -11,14 +11,15 @@
             $this->data['js'] = $this->load->view('include/javascript.php', NULL, TRUE);
             $this->data['css'] = $this->load->view('include/css.php', NULL, TRUE);
             $this->data['firebase'] = $this->load->view('include/firebase.php', NULL, TRUE);
+            $this->data['header'] = $this->load->view('template/header.php',NULL, TRUE);            
             $this->data['js_classes'] = $this->load->view('include/js_classes.php', NULL, TRUE);
             $this->data['js_functions'] = $this->load->view('include/js_home_functions.php', NULL, TRUE);
 
-            $this->data['header'] = $this->load->view('template/header.php',NULL, TRUE);
             $this->data['footer'] = $this->load->view('template/footer.php', NULL, TRUE);
         }
 
         public function index(){
+            $this->load->view('template/offer.php');
             $this->load->view('pages/homeview.php', $this->data);
         }
 

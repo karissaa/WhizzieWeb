@@ -11,12 +11,11 @@
  		<!-- Google font -->
  		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 
-		 <?=$css?>
+		<?=$css?>
 		<?=$firebase?>
 		
 		<?=$js_classes?>
 		<?=$js_functions?>
-
     </head>
 	<body>
 		<!-- HEADER -->
@@ -63,7 +62,7 @@
 		}
 		.center-title {
 			display: flex;
-  		justify-content: center;
+  			justify-content: center;
 		}
 		</style>
 
@@ -75,22 +74,22 @@
                     <a href="<?php echo base_url("index.php/Profile/index"); ?>"><b>CANCEL</b></a>
                 </div>
 				<div class="col-sm-2  pull-right" style="background: orange; border-radius: 20px; text-align:center; padding: 20px;margin: 5px; ">
-                    <a href="#"><b>SAVE CHANGES</b></a>
+                    <a onclick = "saveChanges()"><b>SAVE CHANGES</b></a>
                 </div>
-                
-                
             </div>
 
-			<div class="container container-upload image-back" style="overflow: auto; float: none; text-align:center;">
+			<div id = "imageBackdrop" class="container container-upload image-back" style="overflow: auto; float: none; text-align:center;">
 				<div style="background: rgba(0, 0, 0, 0.75); padding: 20px; width: 250px; border-radius: 20px; margin-left: auto; margin-right: auto; ">
-					<img src="../../assets/img/gigi.jpg" alt="" style="border-radius: 75px; object-fit: cover; width: 150px; height: 150px;"/>
-					<h3 style="padding-top: 20px; color: white;">Felicia Karissa</h3>
+					<img id = "imageProfile" src="" alt="" style="border-radius: 75px; object-fit: cover; width: 150px; height: 150px;"/>
+					<h3 style="padding-top: 20px; color: white;" id = "wisherName"> Felicia Karissa </h3>
                 </div>
                 <br>
                 <div>
-                    <a class="cta-btn primary-btn" style="background: orange;margin: 5px;"><b>Change Profile Picture</b></a><br>
-                    
-                    <a class="cta-btn primary-btn" style="background: orange;margin: 5px;"><b>Change Background</b></a>
+                    <label for="profilePictureInput"><a class="cta-btn primary-btn" style="background: orange;margin: 5px;"><b>Change Profile Picture</b></a><br></label>
+					<input onchange = "previewImageProfile(this)" type="file" class="hidden form-control" size = "20" id = "profilePictureInput" name = "profilePictureInput">
+
+					<label for="backdropPictureInput"><a class="cta-btn primary-btn" style="background: orange;margin: 5px;"><b>Change Background</b></a></label>
+					<input onchange = "previewImageBackdrop(this)" type="file" class="hidden form-control" size = "20" id = "backdropPictureInput" name = "backdropPictureInput">
 				</div>
 			</div>
 
@@ -107,9 +106,9 @@
                     <br>
                     <form class="form-horizontal">
                         <div class="form-group">
-                            <label class="control-label col-sm-2" for="fullname">Full Name</label>
+                            <label class="control-label col-sm-2" for="displayName">Display Name</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="fullname" placeholder="Enter Full Name">
+                                <input type="text" class="form-control" id="displayName" placeholder="Enter new Display Name">
                             </div>
                         </div>
                     </form>
@@ -120,19 +119,8 @@
 			<!-- Ganti Pssword -->
 			<div class="container container-upload" style="background: orange; overflow: auto; float: none; text-align:center; margin-bottom: 5px;">
 				<div class="center-title">
-					<a data-toggle="collapse" data-target="#changepassword"><b>Change Password</b></a>
+					<a onclick = "resetPassword()"><b>Change Password</b></a>
 				</div>
-                <div id="changepassword" class="collapse">
-                    <br>
-                    <form class="form-horizontal">
-                        <div class="form-group">
-                            <label class="control-label col-sm-2" for="title">Title</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="title" placeholder="Enter title">
-                            </div>
-                        </div>
-                    </form>
-                </div>
 			</div>
 			<!-- / Ganti Pssword -->
 
@@ -143,12 +131,10 @@
 					<a data-toggle="collapse" data-target="#demoo"><b>Change Address</b></a>
 				</div>
                 <div id="demoo" class="collapse">
-					<br>
-					
 					<!-- Untuk Alamat -->
-					<div class="row" style="background-color: white; border-radius: 25px; padding: 20px;margin:1px;margin-bottom:5px;">
-					
-						<div class="row">
+					<!-- <br> -->
+					<div class="row" style="background-color: white; border-radius: 25px; padding: 20px;margin:1px;margin-bottom:5px; margin-top:20px;">
+						<div class="row" >
 							<div class="col-sm-4">
 								<h4>Alamat Rumah</h4>
 								<p><span><b>Receiver: </b></span><span>Karissa</span></p>
@@ -169,56 +155,86 @@
 							</div>
 							<div class="col-sm-2">
 								<button type="button" class="btn btn-info">Edit Address</button>
+								<h5 style="color: orange; margin-top:10px;">[Store Address]</h5>
 							</div>
 						</div>
 					</div>
 					<!-- /Untuk Alamat -->
 
-					<!-- Untuk Alamat -->
-					<div class="row" style="background-color: white; border-radius: 25px; padding: 20px;margin:1px;margin-bottom:5px;">
-					
-						<div class="row">
-							<div class="col-sm-4">
-								<h4>Alamat Rumah</h4>
-								<p><span><b>Receiver: </b></span><span>Karissa</span></p>
-								<p>Jalan Alicante Timur 5 No. 56</p>
-								<p>Cluster Alicante Gading Serpong</p>
-							</div>
-							<div class="col-sm-3">
-								<p><b>City</b></p>
-								<p>Tangerang</p>
-								<p><b>Province</b></p>
-								<p>Banten</p>
-							</div>
-							<div class="col-sm-3">
-								<p><b>Postal Code</b></p>
-								<p>15334</p>
-								<p><b>Phone Number</b></p>
-								<p>+62 815 880 888</p>
-							</div>
-							<div class="col-sm-2">
-								<button type="button" class="btn btn-info">Edit Address</button>
-							</div>
-						</div>
+					<!-- Untuk Tambah Alamat -->
+					<div class="row" style="border-radius: 25px; padding: 20px;">
+						<button class="btn btn-info" style="border-radius: 25px; display: block; padding:20px; width: 100%;"><b>Tambah Alamat<b></button>
 					</div>
-					<!-- /Untuk Alamat -->
-
-
+					<!-- /Untuk Tambah Alamat -->
 
                 </div>
 			</div>
+
+			<!-- Modal Edit Address -->
+				<div class="modal" role="dialog" id="modalAddress">
+					<div class="modal-dialog">
+						<div class="modal-content" role="document">
+							<div class="modal-header">
+								<h5 class="modal-title">Change Address</h5> 
+							</div>
+							<div class="modal-body">
+								<div class="form-group">
+									<label for="">Address Name: </label>
+									<input type="text" class="form-control" id="newAddressName">
+									<input type = "hidden" id = "oldAddressName">
+								</div>
+								<div class="form-group">
+									<label for="">City Name: </label>
+									<input type="text" class="form-control" id="newAddressCity">
+								</div>
+								<div class="form-group">
+									<label for="">Detail Address: </label>
+									<input type="text" class="form-control" id="newAddressDetail">
+								</div>
+								<div class="form-group">
+									<label for="">Phone Number: </label>
+									<input type="text" class="form-control" id="newAddressPhoneNumber">
+								</div>
+								<div class="form-group">
+									<label for="">Postal Code: </label>
+									<input type="number" class="form-control" id="newAddressPostalCode">
+								</div>
+								<div class="form-group">
+									<label for="">Province Name: </label>
+									<input type="text" class="form-control" id="newAddressProvinceName">
+								</div>
+								<div class="form-group">
+									<label for="">Receiver Name: </label>
+									<input type="text" class="form-control" id="newAddressReceiverName">
+								</div>
+								<div class="form-group">
+									<label for=""> Is Store Address </label>
+									<input type="checkbox" class="form-control" id="isStoreAddress">
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-submit" onclick = "submitAddress()">Save</button>
+								<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
 			<!-- Ganti Alamat -->
-
-
 		</div>
 
 			<!-- /container -->
-		</div>
+	</div>
 		<!-- /SECTION -->
 
 		<?=$js?>
 		
 		<!-- FOOTER -->
 		<?=$footer?>
+
+		<script>
+		function showModal(){
+			$('#modalAddress').modal("show")
+		}
+	</script>
 	</body>
 </html>

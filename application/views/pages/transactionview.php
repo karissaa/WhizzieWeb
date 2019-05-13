@@ -35,8 +35,8 @@
 					<div class="col-md-12">
 						<h3 class="breadcrumb-header">Transactions</h3>
 						<ul class="breadcrumb-tree">
-							<li><a href="#">Home</a></li>
-							<li class="active">Blank</li>
+							<li><a href="<?php echo base_url(); ?>">Home</a></li>
+							<li class="active">Transactions</li>
 						</ul>
 					</div>
 				</div>
@@ -53,7 +53,7 @@
 		}
 		.container-upload {
 			border-radius: 25px;
-			background: #ccced1;
+			background: #93d5d6;
 			padding: 20px; 
 		}
 		.center-title {
@@ -69,7 +69,7 @@
 			<!-- Note: Button yg di dalem bakal invisible jika transaksi belum dibayar. -->
 
 			<div class="container container-upload">
-				<div class="row" style="background-color: grey; border-radius: 25px; background: #ccced1; padding: 20px; overflow: auto; float: none;">
+				<div class="row" style="border-radius: 25px;  padding: 20px; overflow: auto; float: none;">
 					<div class="col-sm-2">
 						<div style="text-align: center;">
 							<div class="row" >
@@ -91,7 +91,7 @@
 						</div>
 					</div>
 					<div class="col-sm-2" style="text-align:center; vertical-align:middle;">
-						<button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">Detail</button>
+						<button style="background-color:orange;" type="button" class="btn" data-toggle="collapse" data-target="#demo">Detail</button>
 					</div>
 				</div>
 
@@ -109,7 +109,7 @@
 								<p>No. Resi: BDG393092</p>
 							</div>
 							<div class="col-sm-2">
-								<button type="button" class="btn btn-danger" onclick="showModalTransaction()" id="modalTransactionShow">Sudah Bayar</button>
+								<button style="background-color:orange;" type="button" class="btn" onclick="showModalTransaction()" id="modalTransactionShow">Sudah Bayar</button>
 							</div>
 						</div>
 
@@ -223,7 +223,7 @@
 								<div class="modal-header">
 									<h5 class="modal-title">Transaction Finish</h5> 
 								</div>
-								<div class="modal-body">
+								<div class="modal-body"></div>
 									<div class="form-group">
 										<label for="">Transaksi anda sudah Selesai!</label>
 										<label for="checkoutTransactionID" id="checkoutTransactionID">Transaction ID: ABC123</label>
@@ -254,7 +254,7 @@
 								<p>No. Resi: BDG3930939</p>
 							</div>
 							<div class="col-sm-2">
-								<button type="button" class="btn btn-danger">Sudah Bayar</button>
+								<button style="background-color:orange;" type="button" class="btn">Sudah Bayar</button>
 							</div>
 						</div>
 

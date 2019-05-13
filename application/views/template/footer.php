@@ -2,11 +2,11 @@
     <div class="section">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-xs-6">
+                <div class="col-md-6 col-xs-6">
                     <div class="footer">
                         <h3 class="footer-title">About Us</h3>
                         
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+                        <p style="width:300px;">Whizzie is developed by 6 students from Computer Engineering and Informatics.</p>
                         
                         <ul class="footer-links">
                             <li>
@@ -28,47 +28,22 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-xs-6">
-                    <div class="footer">
-                        <h3 class="footer-title">Categories</h3>
-                        <ul class="footer-links">
-                            <!-- Fetch dari Database -->
-                            <li><a href="#">Hot deals</a></li>
-                            <li><a href="#">Laptops</a></li>
-                            <li><a href="#">Smartphones</a></li>
-                            <li><a href="#">Cameras</a></li>
-                            <li><a href="#">Accessories</a></li>
-                        </ul>
-                    </div>
-                </div>
-
                 <div class="clearfix visible-xs"></div>
 
-                <div class="col-md-3 col-xs-6">
+                <div class="col-md-6 col-xs-6">
                     <div class="footer">
                         <h3 class="footer-title">Information</h3>
                         <ul class="footer-links">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Orders and Returns</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
+                            <p>Ellianto <br>
+                            Felicia Karissa <br>
+                            Alexander Gunardi <br>
+                            Felicia Lovely <br>
+                            Rio Sebastian <br>
+                            Leonardo</p>
                         </ul>
                     </div>
                 </div>
 
-                <div class="col-md-3 col-xs-6">
-                    <div class="footer">
-                        <h3 class="footer-title">Service</h3>
-                        <ul class="footer-links">
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">View Cart</a></li>
-                            <li><a href="#">Wishlist</a></li>
-                            <li><a href="#">Track My Order</a></li>
-                            <li><a href="#">Help</a></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -90,9 +65,7 @@
 
                         Copyright &copy;
                         <script> document.write(new Date().getFullYear()); </script> 
-                        All rights reserved | This template is made with 
-                        <i class="fa fa-heart-o" aria-hidden="true"></i> by 
-                        <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        All rights reserved
                     </span>
                 </div>
             </div>

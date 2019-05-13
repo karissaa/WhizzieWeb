@@ -13,14 +13,16 @@
             $this->data['cart_css'] = $this->load->view('include/cart_css.php', NULL, TRUE);
             $this->data['firebase'] = $this->load->view('include/firebase.php', NULL, TRUE);
             $this->data['js_classes'] = $this->load->view('include/js_classes.php', NULL, TRUE);
-            $this->data['js_functions'] = $this->load->view('include/js_home_functions.php', NULL, TRUE);
+            $this->data['js_functions'] = $this->load->view('include/js_cart_functions.php', NULL, TRUE);
 
             $this->data['header'] = $this->load->view('template/header.php',NULL, TRUE);
             $this->data['footer'] = $this->load->view('template/footer.php', NULL, TRUE);
         }
 
         public function index(){
-            $this->load->view('pages/cartview.php', $this->data);
+            if($this->session->user_id !== null)
+                $this->load->view('pages/cartview.php', $this->data);
+            else redirect('Login/index');
         }
     }
 ?>

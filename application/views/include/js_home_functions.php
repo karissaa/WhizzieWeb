@@ -29,7 +29,8 @@
             });
 
             // Sort the wishes using JavaScript Array Sort Prototype
-            latestWishList.sort(function(a,b){return (new Date(b.time)) - (new Date(a.time));});
+            function sortDate(a,b){return (new Date(b.time)) - (new Date(a.time));}
+            latestWishList.sort(sortDate);
 
             // Initiate container Element
             let latestWishSection = document.getElementById("latestWish");
@@ -65,10 +66,6 @@
                                                                 '<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">' +
                                                                     '<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>' +
                                                                 '</button>' +
-                                                                '<div class="dropdown-menu">' +
-                                                                    '<a class="dropdown-item" href="#">Edit</a>' +
-                                                                    '<a class="dropdown-item" href="#">Delete</a>' +
-                                                                '</div>' +
                                                             '</div>' +
                                                         '</div>' +
                                                     '</div>' +
@@ -88,7 +85,6 @@
                 let descToko = ss.child('toko').child('description').val();
                 let productsToko = [];
 
-                // If the user doesn't have 'toko' (kinda impossible), let it be null
                 if(ss.child('toko').hasChild('products')){
                     dbrf.ref('users/' + ss.key + '/toko/products').once('value').then(function(barangs){
                         barangs.forEach(function(barang){

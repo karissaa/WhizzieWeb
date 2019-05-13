@@ -32,7 +32,7 @@
 						<h3 class="breadcrumb-header">Product Details</h3>
 						<ul class="breadcrumb-tree">
 							<li><a href="<?php echo base_url(); ?>">Home</a></li>
-							<li class="active">Blank</li>
+							<li class="active">Product Details</li>
 						</ul>
 					</div>
 				</div>
@@ -158,5 +158,45 @@
 		
 		<!-- FOOTER -->
 		<?=$footer?>
+
+		<div class="modal" role="dialog" id="modalImageOffer">
+            <div class="modal-dialog">
+                <div class="modal-content" role="document">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" style="text-align:center;">CHOOSE A PRODUCT TO OFFER</h4> 
+                    </div>
+                    <div class="" id="modalBodyImageOffer">
+                    <!-- append image here --> 
+
+                        <!-- product card -->
+                        <div class="col-md-4 col-xs-6">
+                            <div class="product">
+                                <div class="product-img">
+                                    <img src="./assets/img/001.jpg" alt="">
+                                </div>
+                                <div class="product-body">
+                                    <h3 class="product-name"><a href="#">Balayage Shoes</a></h3>
+                                    <h4 class="product-price">Rp 78.000</h4>
+                                    <p><i class="fa fa-map-marker"></i>&nbsp&nbspJakarta Timur</p>
+                                    <div class="row">
+                                        <button class="btn btn-info" value=""><b>OFFER</b></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / product card -->
+
+                    
+                    </div>
+
+                    <div class="modal-footer">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
 	</body>
 </html>

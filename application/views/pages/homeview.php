@@ -36,235 +36,7 @@
 			</div>
 		</div>
 
-		<!-- CATEGORIES -->
-		<div class="section">
-			<div class="container" style="padding:25px; padding-bottom:70px;">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="section-title">
-							<h3 class="title"> Categories </h3>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="section-title">
-							<h3 class="title"> Categories </h3>
-						</div>
-					</div>
-
-
-					<div class="col-md-6">
-						<div class="row">
-							<div class="products-tabs">
-								<div id="tab1" class="tab-pane fade in active">
-									<div class="products-slick" data-nav="#slick-nav-1">
-
-										<!-- Categories -->
-										<div class="col" >
-											<div class="product" style="width:130px; display: inline-block">
-												<div class="product-img">
-													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
-												</div>
-											</div>
-										</div>
-										<!-- Categories -->
-
-										<!-- Categories -->
-										<div class="col" >
-											<div class="product" style="width:130px; display: inline-block">
-												<div class="product-img">
-													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
-												</div>
-											</div>
-										</div>
-										<!-- Categories -->
-
-										<!-- Categories -->
-										<div class="col" >
-											<div class="product" style="width:130px; display: inline-block">
-												<div class="product-img">
-													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
-												</div>
-											</div>
-										</div>
-										<!-- Categories -->
-
-										<!-- Categories -->
-										<div class="col" >
-											<div class="product" style="width:130px; display: inline-block">
-												<div class="product-img">
-													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
-												</div>
-											</div>
-										</div>
-										<!-- Categories -->
-
-										<!-- Categories -->
-										<div class="col" >
-											<div class="product" style="width:130px; display: inline-block">
-												<div class="product-img">
-													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
-												</div>
-											</div>
-										</div>
-										<!-- Categories -->
-
-										<!-- Categories -->
-										<div class="col" >
-											<div class="product" style="width:130px; display: inline-block">
-												<div class="product-img">
-													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
-												</div>
-											</div>
-										</div>
-										<!-- Categories -->
-
-										<!-- Categories -->
-										<div class="col" >
-											<div class="product" style="width:130px; display: inline-block">
-												<div class="product-img">
-													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
-												</div>
-											</div>
-										</div>
-										<!-- Categories -->
-
-									</div>
-									<div id="slick-nav-1" class="products-slick-nav"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-6">
-						<div class="row">
-							<div class="products-tabs">
-								<div id="tab1" class="tab-pane fade in active">
-									<div class="products-slick" data-nav="#slick-nav-1">
-
-										<!-- Categories -->
-										<div class="col" >
-											<div class="product" style="width:130px; display: inline-block">
-												<div class="product-img">
-													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
-												</div>
-											</div>
-										</div>
-										<!-- Categories -->
-
-										<!-- Categories -->
-										<div class="col" >
-											<div class="product" style="width:130px; display: inline-block">
-												<div class="product-img">
-													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
-												</div>
-											</div>
-										</div>
-										<!-- Categories -->
-
-										<!-- Categories -->
-										<div class="col" >
-											<div class="product" style="width:130px; display: inline-block">
-												<div class="product-img">
-													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
-												</div>
-											</div>
-										</div>
-										<!-- Categories -->
-
-										<!-- Categories -->
-										<div class="col" >
-											<div class="product" style="width:130px; display: inline-block">
-												<div class="product-img">
-													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
-												</div>
-											</div>
-										</div>
-										<!-- Categories -->
-
-										<!-- Categories -->
-										<div class="col" >
-											<div class="product" style="width:130px; display: inline-block">
-												<div class="product-img">
-													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
-												</div>
-											</div>
-										</div>
-										<!-- Categories -->
-
-										<!-- Categories -->
-										<div class="col" >
-											<div class="product" style="width:130px; display: inline-block">
-												<div class="product-img">
-													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
-												</div>
-											</div>
-										</div>
-										<!-- Categories -->
-
-										<!-- Categories -->
-										<div class="col" >
-											<div class="product" style="width:130px; display: inline-block">
-												<div class="product-img">
-													<img src="./assets/img/010.jpg" alt="" style="object-fit: cover; width: 130px; height: 130px;">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">Men Fashion</a></h3>
-												</div>
-											</div>
-										</div>
-										<!-- Categories -->
-
-									</div>
-									<div id="slick-nav-1" class="products-slick-nav"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-				</div>
-			</div>
-		</div>
-		<!-- / CATEGORIES -->
+		
 
 		<!-- LATEST TOP 3 WISHES -->
 		<div class="section">
@@ -280,10 +52,6 @@
 				</div>
 			</div>
 		</div>
-
-
-		
-
 
 		<!-- FEATURED GENIES -->
 		<div class="section">
@@ -342,5 +110,20 @@
 		<?=$footer?>
 		
 		<?=$js?>
+
+
+
+
+
+	<!-- <script>
+		$( document ).ready(function() {
+			$(window).on('load',function(){
+				$('#modalEditProduct').modal("show");
+				return false;
+			});
+		});
+	</script> -->
+
+
 	</body>
 </html>

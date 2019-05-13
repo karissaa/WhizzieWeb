@@ -18,7 +18,7 @@
             $this->data['footer'] = $this->load->view('template/footer.php', NULL, TRUE);
         }
 
-        public function index(){
+        public function index(){            
             $this->load->view('pages/productsview.php', $this->data);
         }
     }

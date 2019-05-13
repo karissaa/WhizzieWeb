@@ -11,7 +11,7 @@
  		<!-- Google font -->
  		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 
-		 <?=$css?>
+		<?=$css?>
 		<?=$firebase?>
 		
 		<?=$js_classes?>
@@ -36,7 +36,7 @@
 						<h3 class="breadcrumb-header">Profile Wisher</h3>
 						<ul class="breadcrumb-tree">
 							<li><a href="<?php echo base_url(); ?>">Home</a></li>
-							<li class="active">Blank</li>
+							<li class="active">Profile</li>
 						</ul>
 					</div>
 				</div>
@@ -71,10 +71,10 @@
 		<div class="section">
 			<!-- container -->
 
-			<div class="container container-upload image-back" style="overflow: auto; float: none; text-align:center;">
+			<div id = "myBackgroundPic" class="container container-upload image-back" style="overflow: auto; float: none; text-align:center;">
 				<div style="background: rgba(0, 0, 0, 0.75); padding: 20px; width: 270px; border-radius: 20px; margin-left: auto; margin-right: auto; ">
-					<img src="../../assets/img/gigi.jpg" alt="" style="border-radius: 75px; object-fit: cover; width: 150px; height: 150px;"/>
-					<h3 style="padding-top: 20px; color: white;">Felicia Karissa</h3>
+					<img id = "myProfilePic" src="../../assets/img/gigi.jpg" alt="" style="border-radius: 75px; object-fit: cover; width: 150px; height: 150px;"/>
+					<h3 id = "wisherName" style="padding-top: 20px; color: white;">Felicia Karissa</h3>
 					<div></div>
 						<a href="<?=base_url("index.php/ProfileGenie/index"); ?>" class="cta-btn primary-btn" style="background: orange;"><b>GENIE'S MODE</b></a>
 						<a  href="<?=base_url("index.php/SettingWisher/index"); ?>" class="btn"><i class="fa fa-cog" style="color:white;"></i></a>
@@ -85,7 +85,7 @@
 			<div class="container container-upload" style="background: white; overflow: auto; float: none; text-align:center;">
 				<h1>MY WISHES</h1>
 				
-				<div class="row">
+				<div class="row" id = "wishContainer">
 					<!-- product -->
 					<div class="col-md-3 col-xs-6">
 						<div class="product">
@@ -207,5 +207,50 @@
 		
 		<!-- FOOTER -->
 		<?=$footer?>
+
+		<!-- Modal Edit Wish -->
+			<div class="modal" role="dialog" id="modalEditWish">
+					<div class="modal-dialog">
+							<div class="modal-content" role="document">
+									<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+											</button>
+											<h4 class="modal-title" style="text-align:center;">EDIT WISH</h4> 
+									</div>
+									<div class="modal-body">
+											<div class="form-group">
+													<label for="">Title Wish: </label>
+													<input type="text" class="form-control" id="modalWishTitle" required>
+											</div>
+											<div class="form-group">
+													<label for="">Description Wish: </label>
+													<input type="text" class="form-control" id="modalWishDesc" required>
+											</div>
+											<input type="hidden" value = "" id = "modalWishKey">
+									</div>
+									<div class="modal-footer">
+											<button type="button" class="btn btn-info" style="display: block; width: 100%;" onclick = "editWish()">SAVE</button>
+									</div>
+							</div>
+					</div>
+			</div>
+			<!-- / Modal Edit Wish -->
+
+			<script>
+				  function editModal(wishKey){
+						function findWish(temp){
+							return temp.wishKey == wishKey;
+						}
+
+						let chosenWish = myWishes.find(findWish);
+
+						document.getElementById('modalWishTitle').value = chosenWish.title;
+						document.getElementById('modalWishDesc').value = chosenWish.desc;
+						document.getElementById('modalWishKey').value = wishKey;
+
+						$('#modalEditWish').modal('show');
+    			}
+			</script>
 	</body>
 </html>

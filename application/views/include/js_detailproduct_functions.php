@@ -9,7 +9,7 @@
 
     // TODO: Kalau udah implement CI, gunakan PHP Echo di sini
     // Get the list of offered Wishes
-    dbrf.ref('productRelation/0').once('value').then(function(snapshot){
+    dbrf.ref('productRelation/<?=$product_key?>').once('value').then(function(snapshot){
         snapshot.forEach(function(data){
             console.log(data.key);
             dbrf.ref('wishes/' + data.key).once('value').then(function(dataSS){
@@ -27,7 +27,7 @@
     });
 
     // TODO: Kalau udah implement CI, gunakan PHP Echo di sini
-    dbrf.ref("products/0").once('value').then(function(ss){
+    dbrf.ref("products/<?=$product_key?>").once('value').then(function(ss){
         let product = new Product(
             ss.key,
             ss.child('category').val(),
@@ -74,8 +74,13 @@
                 tokoUser
             );
 
+            let productImageRef = 'whizzie_assets/empty/empty.jpg';
+
+            if(product.pic != null && product.pic != '')
+                productImageRef = 'products/' + product.pic;
+
             // Product Image
-            strf.ref('products/' + product.pic).getDownloadURL().then(function(url){
+            strf.ref(productImageRef).getDownloadURL().then(function(url){
                 document.getElementById('productDetailImage').src = url;
             });
 
@@ -133,7 +138,7 @@
 
                         wish.innerHTML = '<div class="product">' +
                                             '<div class="product-img">' +
-                                                '<img src="' + wishImageURL + '" alt="" style="object-fit: cover; width = 264px; height = 264px;">' + //TODO: Sesuaiin ukuran di sini
+                                                '<img src="' + wishImageURL + '" alt="" style="object-fit: cover; width:262.5px; height:262.5px;">' + //TODO: Sesuaiin ukuran di sini
                                             '</div>' +
                                             '<div class="product-body">' +
                                                 '<p class="product-category"> ' + offeredWishes[i].category + ' </p>' +
@@ -141,15 +146,6 @@
                                                 '<p style = "height: 30px;"> ' + (offeredWishes[i].desc.length > 60 ? offeredWishes[i].desc.substring(0,60) + '...' : offeredWishes[i].desc) + ' </p>' +
                                                 '<div class="row">' +
                                                     '<button class="btn"><b> ' + offerCount + ' Offers</b></button>' +
-                                                    '<div class="btn-group product-btns">' +
-                                                        '<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">' +
-                                                            '<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>' +
-                                                        '</button>' +
-                                                        '<div class="dropdown-menu">' +
-                                                            '<a class="dropdown-item" href="#">Edit</a>' +
-                                                            '<a class="dropdown-item" href="#">Delete</a>' +
-                                                        '</div>' +
-                                                    '</div>' +
                                                 '</div>' +
                                             '</div>' +
                                         '</div>';

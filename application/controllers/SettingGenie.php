@@ -20,7 +20,9 @@
         }
 
         public function index(){
-            $this->load->view('pages/settinggenieview.php', $this->data);
+            if($this->session->userdata('user_id') !== null) 
+                $this->load->view('pages/settinggenieview.php', $this->data);
+            else redirect('Login/index'); 
         }
     }
 ?>

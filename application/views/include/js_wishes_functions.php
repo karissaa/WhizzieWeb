@@ -57,10 +57,6 @@
                                                             '<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">' +
                                                                 '<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>' +
                                                             '</button>' +
-                                                            '<div class="dropdown-menu">' +
-                                                                '<a class="dropdown-item" href="#">Edit</a>' +
-                                                                '<a class="dropdown-item" href="#">Delete</a>' +
-                                                            '</div>' +
                                                         '</div>' +
                                                     '</div>' +
                                                 '</div>' +

@@ -75,22 +75,22 @@
                     <a href="<?php echo base_url("index.php/ProfileGenie/index"); ?>"><b>CANCEL</b></a>
                 </div>
 				<div class="col-sm-2  pull-right" style="background: #523163; border-radius: 20px; text-align:center; padding: 20px;margin: 5px; ">
-                    <a href="#"><b style="color:white;">SAVE CHANGES</b></a>
+                    <a onclick = "saveChanges()"><b style="color:white;">SAVE CHANGES</b></a>
                 </div>
-                
-                
             </div>
 
-			<div class="container container-upload image-back" style="overflow: auto; float: none; text-align:center; ">
+			<div id = "imageBackdrop" class="container container-upload image-back" style="overflow: auto; float: none; text-align:center; ">
 				<div style="background: rgba(0, 0, 0, 0.75); padding: 20px; width: 250px; border-radius: 20px; margin-left: auto; margin-right: auto; ">
-					<img src="../../assets/img/gigi.jpg" alt="" style="border-radius: 75px; object-fit: cover; width: 150px; height: 150px;"/>
-					<h3 style="padding-top: 20px; color: white;">Felicia Karissa</h3>
+					<img id = "imageProfile" src="" alt="" style="border-radius: 75px; object-fit: cover; width: 150px; height: 150px;"/>
+					<h3 style="padding-top: 20px; color: white;" id = "genieName"> Felicia Karissa </h3>
                 </div>
                 <br>
                 <div>
-                    <a class="cta-btn primary-btn" style="background: #523163;margin: 5px;"><b>Change Profile Picture</b></a><br>
-                    
-                    <a class="cta-btn primary-btn" style="background: #523163;margin: 5px;"><b>Change Background</b></a>
+                    <label for="profilePictureInput"><a class="cta-btn primary-btn" style="background: #523163;margin: 5px;"><b>Change Profile Picture</b></a><br></label>
+					<input onchange = "previewImageProfile(this)" type="file" class="hidden form-control" size = "20" id = "profilePictureInput" name = "profilePictureInput">
+
+					<label for="backdropPictureInput"><a class="cta-btn primary-btn" style="background: #523163;margin: 5px;"><b>Change Background</b></a></label>
+					<input onchange = "previewImageBackdrop(this)" type="file" class="hidden form-control" size = "20" id = "backdropPictureInput" name = "backdropPictureInput">
 				</div>
 			</div>
 
@@ -109,7 +109,7 @@
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="fullname"style="color:white;" >Store's Name</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="fullname" placeholder="Enter Store's Name">
+                                <input type="text" class="form-control" id="storeName" placeholder="Enter Store's Name">
                             </div>
                         </div>
                     </form>
@@ -120,19 +120,8 @@
 			<!-- Ganti Pssword -->
 			<div class="container container-upload" style="background: #523163; overflow: auto; float: none; text-align:center; margin-bottom: 5px;">
 				<div class="center-title">
-					<a data-toggle="collapse" data-target="#changepassword"><b style="color:white;">Change Password</b></a>
+					<a onclick = "resetPassword()"><b style="color:white;"></b>Change Password</b></a>
 				</div>
-                <div id="changepassword" class="collapse">
-                    <br>
-                    <form class="form-horizontal">
-                        <div class="form-group">
-                            <label class="control-label col-sm-2" for="title" style="color:white;">New Password</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="title" placeholder="Enter Password">
-                            </div>
-                        </div>
-                    </form>
-                </div>
 			</div>
 			<!-- / Ganti Pssword -->
 
@@ -168,6 +157,7 @@
 							</div>
 							<div class="col-sm-2">
 								<button type="button" class="btn btn-info" id="editUserAddress" onclick = "showModal()">Edit Address</button>
+								<h5 style="color: orange; margin-top:10px;">[Store Address]</h5>
 							</div>
 						</div>
 
@@ -203,6 +193,12 @@
 					</div>
 					<!-- /Untuk Alamat -->
 
+					<!-- Untuk Tambah Alamat -->
+					<div class="row" style="border-radius: 25px; padding: 20px;">
+						<button class="btn btn-info" style="border-radius: 25px; display: block; padding:20px; width: 100%;"><b>Tambah Alamat<b></button>
+					</div>
+					<!-- /Untuk Tambah Alamat -->
+
 
 
                 </div>
@@ -216,8 +212,13 @@
 							</div>
 							<div class="modal-body">
 								<div class="form-group">
+									<label for="">Address Name: </label>
+									<input type="text" class="form-control" id="newAddressName">
+									<input type = "hidden" id = "oldAddressName">
+								</div>
+								<div class="form-group">
 									<label for="">City Name: </label>
-									<input type="text" class="form-control" value="" id="newAddressCity">
+									<input type="text" class="form-control" id="newAddressCity">
 								</div>
 								<div class="form-group">
 									<label for="">Detail Address: </label>
@@ -229,7 +230,7 @@
 								</div>
 								<div class="form-group">
 									<label for="">Postal Code: </label>
-									<input type="text" class="form-control" id="newAddressPostalCode">
+									<input type="number" class="form-control" id="newAddressPostalCode">
 								</div>
 								<div class="form-group">
 									<label for="">Province Name: </label>
@@ -239,18 +240,22 @@
 									<label for="">Receiver Name: </label>
 									<input type="text" class="form-control" id="newAddressReceiverName">
 								</div>
+								<div class="form-group">
+									<label for=""> Is Store Address </label>
+									<input type="checkbox" class="form-control" id="isStoreAddress">
+								</div>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-submit">Save</button>
+								<button type="button" class="btn btn-submit" onclick = "submitAddress()">Save</button>
 								<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 							</div>
 						</div>
 					</div>
 				</div>
+				<!-- / Modal Edit Address -->
+
 			</div>
 			<!-- Ganti Alamat -->
-
-
 		</div>
 
 			<!-- /container -->
@@ -261,15 +266,10 @@
 		
 		<!-- FOOTER -->
 		<?=$footer?>
+		<script>
+			function showModal(){
+				$('#modalAddress').modal("show")
+			}
+		</script>
 	</body>
-	
-	<script>
-		function showModal(){
-			$('#modalAddress').modal("show")
-		}
-
-		// $(document).ready(function(){
-        //     $('#editUserAddress').on("click", )
-    	// });
-	</script>
 </html>

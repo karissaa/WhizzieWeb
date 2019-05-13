@@ -75,11 +75,11 @@
       </label>
       <label>
         <span>Password</span>
-        <input type="password" id ="newPassword" />
+        <input type="password" id ="newPassword" min = "8"/>
       </label>
       <label>
         <span>Confirm Password</span>
-        <input type="password" id = "confirmNewPassword" />
+        <input type="password" id = "confirmNewPassword" min = "8"/>
       </label>
       <br><br>
       <div style="text-align:center;">
