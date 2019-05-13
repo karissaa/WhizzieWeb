@@ -1,6 +1,31 @@
 <script>
     let offeredWishes = [];
 
+    const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'IDR',
+        minimumFractionDigits: 2
+    });
+
+    // TODO: Kalau udah implement CI, gunakan PHP Echo di sini
+    // Get the list of offered Wishes
+    dbrf.ref('productRelation/0').once('value').then(function(snapshot){
+        snapshot.forEach(function(data){
+            console.log(data.key);
+            dbrf.ref('wishes/' + data.key).once('value').then(function(dataSS){
+                offeredWishes.push(new Wish(
+                    dataSS.key, 
+                    dataSS.child('category').val(),
+                    dataSS.child('descWish').val(),
+                    dataSS.child('pictureWish').val(),
+                    dataSS.child('timeWish').val(),
+                    dataSS.child('titleWish').val(),
+                    dataSS.child('uidUpWish').val()
+                ));
+            });
+        });
+    });
+
     // TODO: Kalau udah implement CI, gunakan PHP Echo di sini
     dbrf.ref("products/0").once('value').then(function(ss){
         let product = new Product(
@@ -17,6 +42,7 @@
 
         let uploader;
 
+        // Get the Genie
         dbrf.ref('users/' + product.uid).once('value').then(function(snapshot){
             let tokoUser = new Toko(
                 snapshot.child('toko').child('name').val(),
@@ -36,7 +62,6 @@
                 snapshot.child('alamat').child(storeName).child('provinceName').val(),
                 snapshot.child('alamat').child(storeName).child('receiverName').val(),
             ));
-            
 
             uploader = new Users(
                 snapshot.key,
@@ -48,86 +73,93 @@
                 alamatUser,
                 tokoUser
             );
-        });
 
-        dbrf.ref('productRelation/' + ss.key).once('value').then(function(snapshot){
-            let offeredWishes = [];
-            
-            snapshot.forEach(function(data){
-                dbrf.ref('wishes/' + data.key).once('value').then(function(dataSS){
-                    offeredWishes.push(new Wishes(
-
-                    ));
-                });
+            // Product Image
+            strf.ref('products/' + product.pic).getDownloadURL().then(function(url){
+                document.getElementById('productDetailImage').src = url;
             });
-        });
-    });
 
+            // Product Name
+            document.getElementById('productDetailName').innerHTML = product.name;
 
-    // Populate Wish array
-    dbrf.ref("wishes/").once('value').then(function(snapshot){
-        // Fetch all wishes
-        snapshot.forEach(function(ss){
-            latestWishList.push(new Wish(
-                ss.key, 
-                ss.child('category').val(),
-                ss.child('descWish').val(),
-                ss.key + '.jpg',
-                ss.child('timeWish').val(),
-                ss.child('titleWish').val(),
-                ss.child('uidUpWish').val()
-            ));
-        });
+            // Product Price
+            document.getElementById('productDetailPrice').innerHTML = product.price;
 
-        // Sort the wishes using JavaScript Array Sort Prototype
-        latestWishList.sort(function(a,b){return (new Date(b.time)) - (new Date(a.time));});
+            // Product Description
+            document.getElementById('productDetailDesc').innerHTML = product.desc;
 
-        // Initiate container Element
-        let latestWishSection = document.getElementById("latestWish");
-        latestWishSection.innerHTML = '';
+            // Product Category
+            document.getElementById('categoryTag').innerHTML = product.category;
 
-        // Only get top 3
-        for(let i = 0; i < 3; i++){
-            let recentWish = document.createElement('div');
-            recentWish.setAttribute("class", "col-md-4 col-xs-6");
+            // Genie profile Picture
+            let profilePicturePath = 'whizzie_assets/empty/empty_profile.jpg';
 
-            // Get Offer Counts for this wish
-            dbrf.ref('wishRelation/' + latestWishList[i].wishKey).once('value').then(function(dataSS){
-                let offerCount = dataSS.numChildren();
+            if(uploader.profilePic != null && uploader.profilePic != '')
+                profilePicturePath = 'users/' + uploader.uid + '/profile.jpg';
 
-                // Fetch image. then append to the section
-                strf.ref('wishes/' + latestWishList[i].pic).getDownloadURL().then(function(url){
-                    // After getting the download URL, append the element
+            strf.ref(profilePicturePath).getDownloadURL().then(function(url){
+                document.getElementById('genieProfilePicture').src = url;
+            })
 
-                    recentWish.innerHTML =  '<div class="product">' + 
-                                                '<div class="product-img">' + 
-                                                    '<img src= "' + url + '" alt="" style="object-fit: cover; width: 353.33px; height: 353.33px;">' +
-                                                    '<div class="product-label">' +
-                                                        '<span class="new"> NEW </span>' +
-                                                    '</div>' +
-                                                '</div>' +
-                                                '<div class="product-body">' +
-                                                    '<p class="product-category"> ' + latestWishList[i].category + ' </p>' +
-                                                    '<h3 class="product-name"> <a href="#"> ' + latestWishList[i].title + ' </a> </h3>' +
-                                                    '<p> ' + latestWishList[i].desc + ' </p>' +
-                                                    '<div class="row">' + 
-                                                        '<button class="btn"> <b> ' + offerCount + ' Offers </b> </button>' +
-                                                        '<div class="btn-group product-btns">' +
-                                                            '<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">' +
-                                                                '<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>' +
-                                                            '</button>' +
-                                                            '<div class="dropdown-menu">' +
-                                                                '<a class="dropdown-item" href="#">Edit</a>' +
-                                                                '<a class="dropdown-item" href="#">Delete</a>' +
-                                                            '</div>' +
+            // Genie Name
+            document.getElementById('genieName').innerHTML = uploader.toko.name;
+
+            // Genie Location
+            document.getElementById('storeLoc').innerText = uploader.alamat[0].provinceName;
+
+            let iteration = offeredWishes.length;
+
+            let wishesSection = document.getElementById('wishesSection');
+            wishesSection.innerHTML = '';
+
+            for(let i = 0; i < iteration; i++){
+                let wishImageRef = 'whizzie_assets/empty/empty.jpg';
+                let wishImageURL;
+
+                if(offeredWishes[i].pic != null && offeredWishes[i].pic != '')
+                    wishImageRef = 'wishes/' + offeredWishes[i].pic;
+
+                strf.ref(wishImageRef).getDownloadURL().then(function(url){
+                    wishImageURL = url;
+
+                    let offerCount = 0;
+
+                    dbrf.ref('wishRelation').once('value').then(function(relations){
+                        if(relations.hasChild(offeredWishes[i].wishKey))
+                            offerCount = relations.child(offeredWishes[i].wishKey).numChildren();
+
+                        let wish = document.createElement('div');
+                        wish.setAttribute('class', 'col-md-3 col-xs-6');
+
+                        wish.innerHTML = '<div class="product">' +
+                                            '<div class="product-img">' +
+                                                '<img src="' + wishImageURL + '" alt="" style="object-fit: cover; width = 264px; height = 264px;">' + //TODO: Sesuaiin ukuran di sini
+                                            '</div>' +
+                                            '<div class="product-body">' +
+                                                '<p class="product-category"> ' + offeredWishes[i].category + ' </p>' +
+                                                '<h3 class="product-name" style = "height: 30px;"><a> ' + (offeredWishes[i].title.length > 40 ? offeredWishes[i].title.substring(0, 40) + '...' : offeredWishes[i].title) + ' </a></h3>' +
+                                                '<p style = "height: 30px;"> ' + (offeredWishes[i].desc.length > 60 ? offeredWishes[i].desc.substring(0,60) + '...' : offeredWishes[i].desc) + ' </p>' +
+                                                '<div class="row">' +
+                                                    '<button class="btn"><b> ' + offerCount + ' Offers</b></button>' +
+                                                    '<div class="btn-group product-btns">' +
+                                                        '<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">' +
+                                                            '<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>' +
+                                                        '</button>' +
+                                                        '<div class="dropdown-menu">' +
+                                                            '<a class="dropdown-item" href="#">Edit</a>' +
+                                                            '<a class="dropdown-item" href="#">Delete</a>' +
                                                         '</div>' +
                                                     '</div>' +
                                                 '</div>' +
-                                            '</div>';
+                                            '</div>' +
+                                        '</div>';
 
-                    latestWishSection.appendChild(recentWish);
+                        wishesSection.appendChild(wish);
+                    });
                 });
-            });
-        }
+            }
+        });
     });
 </script>
+
+    

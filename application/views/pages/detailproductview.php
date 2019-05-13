@@ -49,11 +49,9 @@
 				<!-- row -->
 				<div class="row">
 					<!-- Product main img -->
-					<div class="col-md-6 col-md-push-0">
-						<div id="product-main-img" id = "productDetailImage">
-							<div class="product-preview">
-								<img src="../../assets/img/product01.png" alt="">
-							</div>
+					<div class="col-md-6 col-md-push-0" >
+						<div id="product-main-img">
+							<img src="" alt="" id = "productDetailImage">
 						</div>
 					</div>
 					<!-- /Product main img -->
@@ -75,7 +73,7 @@
 								<div class="qty-label">
 									Qty
 									<div class="input-number">
-										<input type="number" value = "0" min = "0" max = "9999">
+										<input type="number" value = "1" min = "1" max = "9999">
 										<span class="qty-up">+</span>
 										<span class="qty-down">-</span>
 									</div>
@@ -83,9 +81,9 @@
 								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
 							</div>
 
-							<ul class="product-links" id = "categoryTag">
+							<ul class="product-links" >
 								<li>Category:</li>
-								<li><a href="#">Headphones</a></li>
+								<li><a id = "categoryTag">Headphones</a></li>
 							</ul>
 
 							<div style="margin-top:20px;padding:5px; border-radius:67px;">

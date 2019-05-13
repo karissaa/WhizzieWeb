@@ -7,7 +7,7 @@
         style: 'currency',
         currency: 'IDR',
         minimumFractionDigits: 2
-    })
+    });
 
     // Assign Onload Function
     document.onready = function(){init()};
