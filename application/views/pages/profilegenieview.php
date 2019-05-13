@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>Whizzie | Profile Wisher</title>
+		<title>Whizzie | Profile Genie</title>
 
  		<!-- Google font -->
  		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -33,7 +33,7 @@
 				<!-- row -->
 				<div class="row">
 					<div class="col-md-12">
-						<h3 class="breadcrumb-header">Profile Wisher</h3>
+						<h3 class="breadcrumb-header">Profile Genie</h3>
 						<ul class="breadcrumb-tree">
 							<li><a href="<?php echo base_url(); ?>">Home</a></li>
 							<li class="active">Blank</li>
@@ -74,16 +74,16 @@
 			<div class="container container-upload image-back" style="overflow: auto; float: none; text-align:center;">
 				<div style="background: rgba(0, 0, 0, 0.75); padding: 20px; width: 270px; border-radius: 20px; margin-left: auto; margin-right: auto; ">
 					<img src="../../assets/img/gigi.jpg" alt="" style="border-radius: 75px; object-fit: cover; width: 150px; height: 150px;"/>
-					<h3 style="padding-top: 20px; color: white;">Felicia Karissa</h3>
+					<h3 style="padding-top: 20px; color: white;">Karissa's Shop</h3>
 					<div></div>
-						<a href="<?=base_url("index.php/ProfileGenie/index"); ?>" class="cta-btn primary-btn" style="background: orange;"><b>GENIE'S MODE</b></a>
-						<a  href="<?=base_url("index.php/SettingWisher/index"); ?>" class="btn"><i class="fa fa-cog" style="color:white;"></i></a>
+						<a href="<?=base_url("index.php/Profile/index"); ?>" class="cta-btn primary-btn" style="background: #523163;"><b>WISHER'S MODE</b></a>
+						<a  href="<?=base_url("index.php/SettingGenie/index"); ?>" class="btn"><i class="fa fa-cog" style="color:white;"></i></a>
 					</div>
 				</div>
 			</div>
 
 			<div class="container container-upload" style="background: white; overflow: auto; float: none; text-align:center;">
-				<h1>MY WISHES</h1>
+				<h1>MY PRODUCTS</h1>
 				
 				<div class="row">
 					<!-- product -->
@@ -93,11 +93,11 @@
 								<img src="../../assets/img/001.jpg" alt="">
 							</div>
 							<div class="product-body">
-								<p class="product-category">Men Fashion</p>
-								<h3 class="product-name"><a href="#">Wooden Mahogany Watch</a></h3>
-								<p>Really need one for my wedding!</p>
+                                <h3 class="product-name"><a href="#">Balayage Shoes</a></h3>
+                                <h4 class="product-price">Rp 78.000</h4>
+                                <p><i class="fa fa-map-marker"></i>&nbsp&nbspJakarta Timur</p>
 								<div class="row">
-									<button class="btn"><b>8 Offers</b></button>
+									<button class="btn"><b>8 Wishes</b></button>
 									<div class="btn-group product-btns">
 										<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">
 											<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>
@@ -113,18 +113,18 @@
 					</div>
 					<!-- /product -->
 
-					<!-- product -->
+					<!-- product 2 -->
 					<div class="col-md-3 col-xs-6">
 						<div class="product">
 							<div class="product-img">
-								<img src="../../assets/img/gigi.jpg" alt="">
+								<img src="../../assets/img/001.jpg" alt="">
 							</div>
 							<div class="product-body">
-								<p class="product-category">Men Fashion</p>
-								<h3 class="product-name"><a href="#">Wooden Mahogany Watch</a></h3>
-								<p>Really need one for my wedding!</p>
+                                <h3 class="product-name"><a href="#">Balayage Shoes</a></h3>
+                                <h4 class="product-price">Rp 78.000</h4>
+                                <p><i class="fa fa-map-marker"></i>&nbsp&nbspJakarta Timur</p>
 								<div class="row">
-									<button class="btn"><b>8 Offers</b></button>
+									<button class="btn"><b>8 Wishes</b></button>
 									<div class="btn-group product-btns">
 										<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">
 											<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>
@@ -138,20 +138,20 @@
 							</div>
 						</div>
 					</div>
-					<!-- /product -->
+					<!-- /product 2 -->
 
-					<!-- product -->
+					<!-- product 3 -->
 					<div class="col-md-3 col-xs-6">
 						<div class="product">
 							<div class="product-img">
-								<img src="../../assets/img/009.jpg" alt="">
+								<img src="../../assets/img/001.jpg" alt="">
 							</div>
 							<div class="product-body">
-								<p class="product-category">Men Fashion</p>
-								<h3 class="product-name"><a href="#">Wooden Mahogany Watch</a></h3>
-								<p>Really need one for my wedding!</p>
+                                <h3 class="product-name"><a href="#">Balayage Shoes</a></h3>
+                                <h4 class="product-price">Rp 78.000</h4>
+                                <p><i class="fa fa-map-marker"></i>&nbsp&nbspJakarta Timur</p>
 								<div class="row">
-									<button class="btn"><b>8 Offers</b></button>
+									<button class="btn"><b>8 Wishes</b></button>
 									<div class="btn-group product-btns">
 										<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">
 											<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>
@@ -165,20 +165,20 @@
 							</div>
 						</div>
 					</div>
-					<!-- /product -->
+					<!-- /product 3 -->
 
-					<!-- product -->
+					<!-- product 4 -->
 					<div class="col-md-3 col-xs-6">
 						<div class="product">
 							<div class="product-img">
-								<img src="../../assets/img/010.jpg" alt="" style="object-fit: cover; width: 260px; height: 260px;">
+								<img src="../../assets/img/001.jpg" alt="">
 							</div>
 							<div class="product-body">
-								<p class="product-category">Men Fashion</p>
-								<h3 class="product-name"><a href="#">Wooden Mahogany Watch</a></h3>
-								<p>Really need one for my wedding!</p>
+                                <h3 class="product-name"><a href="#">Balayage Shoes</a></h3>
+                                <h4 class="product-price">Rp 78.000</h4>
+                                <p><i class="fa fa-map-marker"></i>&nbsp&nbspJakarta Timur</p>
 								<div class="row">
-									<button class="btn"><b>8 Offers</b></button>
+									<button class="btn"><b>8 Wishes</b></button>
 									<div class="btn-group product-btns">
 										<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">
 											<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>
@@ -192,7 +192,7 @@
 							</div>
 						</div>
 					</div>
-					<!-- /product -->
+					<!-- /product 4 -->
 
 				</div>
 				
