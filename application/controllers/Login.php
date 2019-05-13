@@ -25,5 +25,12 @@
         public function index(){
             $this->load->view('pages/loginview.php', $this->data);
         }
+
+        public function login(){
+            $uid = $this->input->post('uid');
+
+            $this->session->set_userdata('user_id',$uid);
+            $this->session->set_userdata('genie_mode', false);
+        }
     }
 ?>
