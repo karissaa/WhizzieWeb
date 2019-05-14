@@ -58,15 +58,10 @@
                                                     '</div>' +
                                                     '<div class="product-body">' +
                                                         '<p class="product-category"> ' + latestWishList[i].category + ' </p>' +
-                                                        '<h3 class="product-name" style = "height : 30px;"> <a href="#"> ' + (latestWishList[i].title.length > 40 ? latestWishList[i].title.substring(0, 40) + '...' : latestWishList[i].title) + ' </a> </h3>' +
+                                                        '<h3 class="product-name" style = "height : 30px;"> <a href="<?=base_url('index.php/DetailWish/index/' + latestWishList[i].wishKey)?>"> ' + (latestWishList[i].title.length > 40 ? latestWishList[i].title.substring(0, 40) + '...' : latestWishList[i].title) + ' </a> </h3>' +
                                                         '<p style = "height:30px;"> ' + (latestWishList[i].desc.length > 60 ? latestWishList[i].desc.substring(0, 60) + '...' : latestWishList[i].desc) + ' </p>' +
                                                         '<div class="row">' + 
                                                             '<button class="btn"> <b> ' + offerCount + ' Offers </b> </button>' +
-                                                            '<div class="btn-group product-btns">' +
-                                                                '<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">' +
-                                                                    '<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>' +
-                                                                '</button>' +
-                                                            '</div>' +
                                                         '</div>' +
                                                     '</div>' +
                                                 '</div>';

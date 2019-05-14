@@ -12,13 +12,15 @@
             <div class="modal" role="dialog" id="modalEditWish">
                 <div class="modal-dialog">
                     <div class="modal-content" role="document">
-                        <div class="modal-header">
+                        <div class="modal-body" style="padding-right: 20px; padding-top: 20px;">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            <h4 class="modal-title" style="text-align:center;">EDIT WISH</h4> 
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body" style="padding: 50px; padding-top: 10px;">
+                            <div class="form-group">
+                                <h4 class="modal-title" style="text-align:center;">EDIT WISH</h4> 
+                            </div>
                             <div class="form-group">
                                 <label for="">Title Wish: </label>
                                 <input type="text" class="form-control" id="newAddressName">
@@ -27,9 +29,7 @@
                                 <label for="">Description Wish: </label>
                                 <input type="text" class="form-control" id="newAddressCity">
                             </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-info" style="display: block; width: 100%;">SAVE</button>
+                            <button type="button" class="btn btn-info" style="margin-top: 40px; display: block; width: 100%;">SAVE</button>                     
                         </div>
                     </div>
                 </div>

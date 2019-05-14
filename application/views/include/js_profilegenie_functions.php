@@ -101,10 +101,10 @@
                                                                                     '<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">' +
                                                                                         '<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>' +
                                                                                     '</button>' +
-                                                                                    '<div class="dropdown-menu">' +
-                                                                                        '<a class="dropdown-item" onclick="editModal(' + product.productKey + ')">Edit</a>' +
-                                                                                        '<a class="dropdown-item" onclick="deleteProduct(' + product.productKey + ')">Delete</a>' +
-                                                                                    '</div>' +
+                                                                                    '<ul class="dropdown-menu">' +
+                                                                                        '<li><a class="btn dropdown-item" onclick="editModal(' + product.productKey + ')">Edit</a></li>' +
+                                                                                        '<li><a class="btn dropdown-item" onclick="deleteProduct(' + product.productKey + ')">Delete</a></li>' +
+                                                                                    '</ul>' +
                                                                                 '</div>' +
                                                                             '</div>' +
                                                                         '</div>' +

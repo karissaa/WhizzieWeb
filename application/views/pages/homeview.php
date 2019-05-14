@@ -115,14 +115,14 @@
 
 
 
-	<!-- <script>
+	<script>
 		$( document ).ready(function() {
 			$(window).on('load',function(){
-				$('#modalEditProduct').modal("show");
+				$('#modalEditWish').modal("show");
 				return false;
 			});
 		});
-	</script> -->
+	</script>
 
 
 	</body>

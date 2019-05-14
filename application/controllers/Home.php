@@ -19,7 +19,7 @@
         }
 
         public function index(){
-            $this->load->view('template/offer.php');
+           // $this->load->view('template/offer.php');
             $this->load->view('pages/homeview.php', $this->data);
         }
 

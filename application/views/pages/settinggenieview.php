@@ -11,7 +11,7 @@
  		<!-- Google font -->
  		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 
-		 <?=$css?>
+		<?=$css?>
 		<?=$firebase?>
 		
 		<?=$js_classes?>
@@ -36,7 +36,7 @@
 						<h3 class="breadcrumb-header">Setting Profile Genie</h3>
 						<ul class="breadcrumb-tree">
 							<li><a href="<?php echo base_url(); ?>">Home</a></li>
-							<li class="active">Blank</li>
+							<li class="active"> Profile (Genie) </li>
 						</ul>
 					</div>
 				</div>
@@ -57,13 +57,12 @@
 			padding: 20px; 
 		}
 		.image-back{
-			background-image: url(../../assets/img/009.jpg);
-			/* object-fit: contain; */
+			background-image: url();
 			height: 420px;
 		}
 		.center-title {
 			display: flex;
-  		justify-content: center;
+  			justify-content: center;
 		}
 		</style>
 
@@ -72,7 +71,7 @@
 			<!-- container -->
 			<div class="container" style="text-align:center;">
 				<div class="col-sm-1  pull-right" style="background: grey; border-radius: 20px; text-align:center; padding: 20px;margin: 5px;">
-                    <a href="<?php echo base_url("index.php/ProfileGenie/index"); ?>"><b>CANCEL</b></a>
+                    <a href="<?=base_url("index.php/ProfileGenie/index")?>"><b>CANCEL</b></a>
                 </div>
 				<div class="col-sm-2  pull-right" style="background: #523163; border-radius: 20px; text-align:center; padding: 20px;margin: 5px; ">
                     <a onclick = "saveChanges()"><b style="color:white;">SAVE CHANGES</b></a>
@@ -82,7 +81,7 @@
 			<div id = "imageBackdrop" class="container container-upload image-back" style="overflow: auto; float: none; text-align:center; ">
 				<div style="background: rgba(0, 0, 0, 0.75); padding: 20px; width: 250px; border-radius: 20px; margin-left: auto; margin-right: auto; ">
 					<img id = "imageProfile" src="" alt="" style="border-radius: 75px; object-fit: cover; width: 150px; height: 150px;"/>
-					<h3 style="padding-top: 20px; color: white;" id = "genieName"> Felicia Karissa </h3>
+					<h3 style="padding-top: 20px; color: white;" id = "genieName">  </h3>
                 </div>
                 <br>
                 <div>
@@ -120,7 +119,7 @@
 			<!-- Ganti Pssword -->
 			<div class="container container-upload" style="background: #523163; overflow: auto; float: none; text-align:center; margin-bottom: 5px;">
 				<div class="center-title">
-					<a onclick = "resetPassword()"><b style="color:white;"></b>Change Password</b></a>
+					<a onclick = "resetPassword()"><b style="color:white;">Change Password</b></a>
 				</div>
 			</div>
 			<!-- / Ganti Pssword -->
@@ -133,73 +132,12 @@
 				</div>
                 <div id="demoo" class="collapse">
 					<br>
-					
-					<!-- Untuk Alamat -->
-					<div class="row" style="background-color: white; border-radius: 25px; padding: 20px;margin:1px;margin-bottom:5px;">
-						<div class="row">
-							<div class="col-sm-4">
-								<h4>Alamat Rumah</h4>
-								<p><span><b>Receiver: </b></span><span>Karissa</span></p>
-								<p>Jalan Alicante Timur 5 No. 56</p>
-								<p>Cluster Alicante Gading Serpong</p>
-							</div>
-							<div class="col-sm-3">
-								<p><b>City</b></p>
-								<p>Tangerang</p>
-								<p><b>Province</b></p>
-								<p>Banten</p>
-							</div>
-							<div class="col-sm-3">
-								<p><b>Postal Code</b></p>
-								<p>15334</p>
-								<p><b>Phone Number</b></p>
-								<p>+62 815 880 888</p>
-							</div>
-							<div class="col-sm-2">
-								<button type="button" class="btn btn-info" id="editUserAddress" onclick = "showModal()">Edit Address</button>
-								<h5 style="color: orange; margin-top:10px;">[Store Address]</h5>
-							</div>
-						</div>
-
-					</div>
-					<!-- /Untuk Alamat -->
-
-					<!-- Untuk Alamat -->
-					<div class="row" style="background-color: white; border-radius: 25px; padding: 20px;margin:1px;margin-bottom:5px;">
-					
-						<div class="row">
-							<div class="col-sm-4">
-								<h4>Alamat Rumah</h4>
-								<p><span><b>Receiver: </b></span><span>Karissa</span></p>
-								<p>Jalan Alicante Timur 5 No. 56</p>
-								<p>Cluster Alicante Gading Serpong</p>
-							</div>
-							<div class="col-sm-3">
-								<p><b>City</b></p>
-								<p>Tangerang</p>
-								<p><b>Province</b></p>
-								<p>Banten</p>
-							</div>
-							<div class="col-sm-3">
-								<p><b>Postal Code</b></p>
-								<p>15334</p>
-								<p><b>Phone Number</b></p>
-								<p>+62 815 880 888</p>
-							</div>
-							<div class="col-sm-2">
-								<button type="button" class="btn btn-info">Edit Address</button>
-							</div>
-						</div>
-					</div>
-					<!-- /Untuk Alamat -->
 
 					<!-- Untuk Tambah Alamat -->
 					<div class="row" style="border-radius: 25px; padding: 20px;">
 						<button class="btn btn-info" style="border-radius: 25px; display: block; padding:20px; width: 100%;"><b>Tambah Alamat<b></button>
 					</div>
 					<!-- /Untuk Tambah Alamat -->
-
-
 
                 </div>
 

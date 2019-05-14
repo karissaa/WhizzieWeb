@@ -84,18 +84,18 @@
                                                     '</div>' +
                                                     '<div class="product-body">' +
                                                         '<p class="product-category"> ' + item.category + ' </p>' +
-                                                        '<h3 class="product-name" style = "height:30px;"    > <a href="#"> ' + (item.title.length > 30 ? item.title.substring(0, 30) + '...' : item.title) + ' </a> </h3>' +
+                                                        '<h3 class="product-name" style = "height:30px;"> <a href="#"> ' + (item.title.length > 30 ? item.title.substring(0, 30) + '...' : item.title) + ' </a> </h3>' +
                                                         '<p style = "height: 30px;">' + (item.desc.length > 60 ? item.desc.substring(0, 60) + '...' : item.desc) + '</p>' +
                                                         '<div class="row">' +
                                                             '<button class="btn"><b> ' + offerCount + ' Offers</b></button>' +
-                                                            '<div class="btn-group product-btns">' +
+                                                            '<div class="dropup btn-group product-btns">' +
                                                                 '<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">' +
                                                                     '<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>' +
                                                                 '</button>' +
-                                                                '<div class="dropdown-menu">' +
-                                                                    '<a class="dropdown-item" onclick ="editModal(' + item.wishKey + ')">Edit</a>' +
-                                                                    '<a class="dropdown-item" onclick = "delete(' + item.wishKey + ')">Delete</a>' +
-                                                                '</div>' +
+                                                                '<ul class="dropdown-menu" style="left: 50% !important; right: auto !important;  transform: translate(-50%, 0) !important;" >' +
+                                                                    '<li><a class="" onclick ="editModal(' + item.wishKey + ')">Edit</a></li>' +
+                                                                    '<li><a class="" onclick = "deleteWish(' + item.wishKey + ')">Delete</a></li>' +
+                                                                '</ul>' +
                                                             '</div>' +
                                                         '</div>' +
                                                     '</div>' +
@@ -110,7 +110,6 @@
 
     function deleteWish(wishKey){
         dbrf.ref('wishes/' + wishKey).remove();
-
         location.reload();
     }
     

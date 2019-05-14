@@ -91,11 +91,9 @@
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
 							<div class="dropdown">
-								<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Categories
-								<span class="caret"></span></button>
-								<ul class="dropdown-menu" id = "categoryInputs">
+								<select class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">	
 
-								</ul>
+								</select>
 							</div>
 						</div>
 					</div>

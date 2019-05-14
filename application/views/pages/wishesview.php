@@ -59,14 +59,6 @@
 		</style>
 
 		<br><br>
-		<!-- 
-			<div class="container container-upload">
-					<button>Products</button>
-					<button>Products</button>
-			</div>
-			
-			<br><br>
-		-->
 
 		<!-- TODO: Cuma Muncul kalo Wisher's Mode -->
 		<div class="container container-upload">
@@ -94,14 +86,8 @@
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
 							<div class="dropdown">
-								<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Categories
-									<span class="caret"></span>
-								</button>
-									<ul class="dropdown-menu" id = "categoryInputs">
-										<li><a href="#">Automotive</a></li>
-										<li><a href="#">Beauty</a></li>
-										<li><a href="#">Men Fashion</a></li>
-									</ul>
+									<select class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">
+									</select>
 							</div>
 						</div>
 					</div>
@@ -109,10 +95,10 @@
 						<div class="col-sm-offset-2 col-sm-10">
 							<input type="file" name="img" class="file" id = "newWishImage">
 							<div class="input-group col-xs-12">
-								<span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+								<span class="input-group-addon"><i class="fa fa-glass"></i></span>
 								<input type="text" class="form-control input-lg" disabled placeholder="Upload Image">
 								<span class="input-group-btn">
-									<button class="browse btn btn-info input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+									<button class="browse btn btn-info input-lg" type="button"><i class="fa fa-glass"></i> Browse</button>
 								</span>
 							</div>
 						</div>

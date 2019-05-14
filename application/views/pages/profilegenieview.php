@@ -57,7 +57,7 @@
 			padding: 20px; 
 		}
 		.image-back{
-			background-image: url(../../assets/img/009.jpg);
+			background-image: url();
 			height: 420px;
 		}
 		.center-title {
@@ -71,7 +71,7 @@
 			<!-- container -->
 			<div class="container container-upload image-back" style="overflow: auto; float: none; text-align:center;" id = "genieBackdrop">
 				<div style="background: rgba(0, 0, 0, 0.75); padding: 20px; width: 270px; border-radius: 20px; margin-left: auto; margin-right: auto; ">
-					<img id = "genieProfPic" src="../../assets/img/gigi.jpg" alt="" style="border-radius: 75px; object-fit: cover; width: 150px; height: 150px;"/>
+					<img id = "genieProfPic" src="" alt="" style="border-radius: 75px; object-fit: cover; width: 150px; height: 150px;"/>
 					<h3 style="padding-top: 20px; color: white;" id = "genieName"> Karissa's Shop</h3>
 					<div>
 						<a href="<?=base_url("index.php/Profile/index")?>" class="cta-btn primary-btn" style="background: #523163;"> <b>WISHER'S MODE</b> </a>
@@ -84,32 +84,7 @@
 				<h1>MY PRODUCTS</h1>
 				
 				<div class="row" id = "productContainer">
-					<!-- product -->
-					<div class="col-md-3 col-xs-6">
-						<div class="product">
-							<div class="product-img">
-								<img src="../../assets/img/001.jpg" alt="">
-							</div>
-							<div class="product-body">
-                                <h3 class="product-name"><a href="#">Balayage Shoes</a></h3>
-                                <h4 class="product-price">Rp 78.000</h4>
-                                <p><i class="fa fa-map-marker"></i>&nbsp&nbspJakarta Timur</p>
-								<div class="row">
-									<button class="btn"><b>8 Wishes</b></button>
-									<div class="btn-group product-btns">
-										<button type="button" class="add-to-wishlist dropdown-toggle" data-toggle="dropdown">
-											<i class="fa fa-ellipsis-v"></i><span class="tooltipp">Settings</span>
-										</button>
-										<div class="dropdown-menu">
-											<a class="dropdown-item" href="#">Edit</a>
-											<a class="dropdown-item" href="#">Delete</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /product -->
+
 				</div>
 			</div>
 

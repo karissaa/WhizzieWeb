@@ -206,11 +206,11 @@
             document.getElementById('newAddressName').value         = id;
             document.getElementById('oldAddressName').value         = id;
             document.getElementById('newAddressCity').value         = chosenAddress.querySelector("#cityName").innerHTML;
-            document.getElementById('newAddressDetail').value       =    chosenAddress.querySelector("#detailAddress").innerHTML;
-            document.getElementById('newAddressPhoneNumber').value  =    chosenAddress.querySelector("#phoneNumber").innerHTML;
-            document.getElementById('newAddressPostalCode').value   =    chosenAddress.querySelector("#postalCode").innerHTML;
-            document.getElementById('newAddressProvinceName').value =    chosenAddress.querySelector("#provinceName").innerHTML;
-            document.getElementById('newAddressReceiverName').value =    chosenAddress.querySelector("#receiverName").innerHTML;
+            document.getElementById('newAddressDetail').value       = chosenAddress.querySelector("#detailAddress").innerHTML;
+            document.getElementById('newAddressPhoneNumber').value  = chosenAddress.querySelector("#phoneNumber").innerHTML;
+            document.getElementById('newAddressPostalCode').value   = chosenAddress.querySelector("#postalCode").innerHTML;
+            document.getElementById('newAddressProvinceName').value = chosenAddress.querySelector("#provinceName").innerHTML;
+            document.getElementById('newAddressReceiverName').value = chosenAddress.querySelector("#receiverName").innerHTML;
             document.getElementById('isStoreAddress').checked = (wisher.storeAddress == id)
         } else {    
             document.getElementById('newAddressName').value         = '';
@@ -230,6 +230,33 @@
     function submitAddress(){
         if(document.getElementById('oldAddressName').value != ''){
             // Remove old address
+            let oldAddressKey   = document.getElementById('oldAddressName').value;
+            let newAddressKey   = document.getElementById('newAddressName').value;
+            let newCityName     = document.getElementById('newAddressCity').value;
+            let newDetailAddress= document.getElementById('newAddressDetail').value;
+            let newPhoneNumber  = document.getElementById('newAddressPhoneNumber').value;
+            let newPostalCode   = document.getElementById('newAddressPostalCode').value;
+            let newProvinceName = document.getElementById('newAddressProvinceName').value;
+            let newReceiverName = document.getElementById('newAddressReceiverName').value;
+            let isStoreAddress  = document.getElementById('isStoreAddress').checked;
+
+            dbrf.ref('users/' + wisher.uid + '/alamat/' + oldAddressKey).remove();
+
+            dbrf.ref('users/' + wisher.uid + '/alamat/' + newAddressKey).set({
+                cityName : newCityName,
+                detailAddress : newDetailAddress,
+                phoneNum : newPhoneNumber,
+                postalCode : newPostalCode,
+                provinceName : newProvinceName,
+                receiverName : newReceiverName
+            });
+
+            if(isStoreAddress){
+                let updates = {};
+
+                updates['users/' + wisher.uid + '/storeAddress'] = newAddressKey;
+                firebase.database().ref().update(updates);
+            }
         }
 
         if(document.getElementById('newAddressName').value == '' || document.getElementById('newAddressName').value == null){
@@ -247,7 +274,7 @@
             let isStoreAddress  = document.getElementById('isStoreAddress').checked;
 
 
-            dbrf.ref('users/' + wisher.uid + '/alamat/' + targetAddress).set({
+            dbrf.ref('users/' + wisher.uid + '/alamat/' + newAddressKey).set({
                 cityName : newCityName,
                 detailAddress : newDetailAddress,
                 phoneNum : newPhoneNumber,
@@ -259,10 +286,12 @@
             if(isStoreAddress){
                 let updates = {};
 
-                updates['users/' + wisher.uid + '/storeAddress'] = targetAddress;
+                updates['users/' + wisher.uid + '/storeAddress'] = newAddressKey;
                 firebase.database().ref().update(updates);
             }
         }
+
+        location.reload();
     }
 
     document.onready = function(){init()}

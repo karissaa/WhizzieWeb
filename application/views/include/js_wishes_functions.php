@@ -14,7 +14,7 @@
                     ss.key, 
                     ss.child('category').val(),
                     ss.child('descWish').val(),
-                    ss.key + '.jpg',
+                    ss.child('pictureWish').val(),
                     ss.child('timeWish').val(),
                     ss.child('titleWish').val(),
                     ss.child('uidUpWish').val()
@@ -22,7 +22,7 @@
             });
 
             // Sort the wishes using JavaScript Array Sort Prototype
-            // wishesArr.sort(function(a,b){return (new Date(b.time)) - (new Date(a.time));});
+            wishesArr.sort(function(a,b){return (new Date(b.time)) - (new Date(a.time));});
 
             // Initiate container Element
             let latestWishSection = document.getElementById("wishSection");
@@ -77,7 +77,7 @@
             let iteration = categories.length;
 
             // Populating Category Input Dropdown
-            let categoryInputSection = document.getElementById("categoryInputs");
+            let categoryInputSection = document.getElementsByClassName("dropdown-toggle")[1];
             categoryInputSection.innerHTML = '';
 
             // Populating Category Filters
@@ -85,8 +85,10 @@
             categoryFilterSection.innerHTML = '';
 
             for(let i = 0; i < iteration; i++){
-                let categoryInput = document.createElement('li');
-                categoryInput.innerHTML = '<a>' + categories[i].name + '</a>';
+                let categoryInput = document.createElement('option');
+                categoryInput.setAttribute('value', categories[i].name);
+                categoryInput.setAttribute('class', 'btn btn-info');
+                categoryInput.innerHTML = categories[i].name;
 
                 categoryInputSection.appendChild(categoryInput);
 
@@ -106,23 +108,14 @@
 
     let user = '<?=$user_id?>';
 
-    //Handle waiting to upload each file using promise
-    function uploadImageAsPromise (imageFile) {
-        return new Promise(function (resolve, reject) {
-            //Upload file
-            let task = strf.ref('users/' + user + '/' + imageFile.name).put(imageFile);
-        });
-    }
-
     function uploadWish(){
         if(user == null){
             alert('Sorry, you can only upload wishes when you\'ve signed in')
         } else {
             let newWishTitle = document.getElementById('newWishTitle').value;
             let newWishDesc = document.getElementById('newWishDesc').value;
-            // let categoryDropDown = document.getElementById('categoryInputs');
-            // let newWishCat = categoryDropDown[categoryDropDown.selectedIndex].value;
-            let newWishCat = 'Automotive'
+            let categoryDropDown = document.getElementsByClassName("dropdown-toggle")[1];
+            let newWishCat = categoryDropDown[categoryDropDown.selectedIndex].value;
 
             // Image Upload, can be null
             let newWishImg = document.getElementById('newWishImage');
@@ -131,7 +124,6 @@
                 alert('Please fill in the input fields properly');
             } else {
                 let newKey = 0;
-                let imageUpload = false;
                 dbrf.ref('wishes').once('value').then(function(dataSnapshot){
                     dataSnapshot.forEach(function(key){
                         if(key.key > newKey)
@@ -141,7 +133,6 @@
                     let now = new Date()
                     let timestamp = now.getFullYear() + '/' + now.getMonth() + '/' + now.getDate() + ' ' + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
 
-                    
                     if(newWishImg.files && newWishImg.files[0]){
                         let image = newWishImg.files[0].slice(0, newWishImg.files[0].size, 'image/jpg');
                         let newFile = new File([image], newKey + '.jpg', {type: 'image/jpg'});
@@ -151,26 +142,13 @@
                         let filename = newKey + '.jpg';
 
                         dbrf.ref('wishes/' + newKey).set({
-                                category : newWishCat,
-                                descWish : newWishDesc,
-                                pictureWish : filename,
-                                timeWish : timestamp,
-                                titleWish : newWishTitle,
-                                uidUpWish : user
-                            });
-
-                        // Promise.all([uploadImageAsPromise(newFile)]).then(function(snapshot){
-                        //     let filename = newKey + '.jpg';
-
-                        //     dbrf.ref('wishes/' + newKey).set({
-                        //         category : newWishCat,
-                        //         descWish : newWishDesc,
-                        //         pictureWish : filename,
-                        //         timeWish : timestamp,
-                        //         titleWish : newWishTitle,
-                        //         uidUpWish : user
-                        //     });
-                        // })
+                            category : newWishCat,
+                            descWish : newWishDesc,
+                            pictureWish : filename,
+                            timeWish : timestamp,
+                            titleWish : newWishTitle,
+                            uidUpWish : user
+                        });
                     } else {
                         dbrf.ref('wishes/' + newKey).set({
                             category : newWishCat,
@@ -180,10 +158,8 @@
                             titleWish : newWishTitle,
                             uidUpWish : user
                         });   
-                    }
-                    
+                    } 
                 });
-
             }
         }
     }

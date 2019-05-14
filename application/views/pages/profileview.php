@@ -82,7 +82,7 @@
 				</div>
 			</div>
 
-			<div class="container container-upload" style="background: white; overflow: auto; float: none; text-align:center;">
+			<div class="container container-upload" style="height:auto; background: white; overflow: auto; float: none; text-align:center;">
 				<h1>MY WISHES</h1>
 				
 				<div class="row" id = "wishContainer">

@@ -149,7 +149,7 @@
             let iteration = categories.length;
 
             // Populating Category Input Dropdown
-            let categoryInputSection = document.getElementById("categoryInputs");
+            let categoryInputSection = document.getElementsByClassName("dropdown-toggle")[1];
             categoryInputSection.innerHTML = '';
 
             // Populating Category Filters
@@ -157,8 +157,10 @@
             categoryFilterSection.innerHTML = '';
 
             for(let i = 0; i < iteration; i++){
-                let categoryInput = document.createElement('li');
-                categoryInput.innerHTML = '<a>' + categories[i].name + '</a>';
+                let categoryInput = document.createElement('option');
+                categoryInput.setAttribute('class', 'btn btn-info');
+                categoryInput.setAttribute('value', categories[i].name);
+                categoryInput.innerHTML = categories[i].name;
 
                 categoryInputSection.appendChild(categoryInput);
 
@@ -174,5 +176,66 @@
                 categoryFilterSection.appendChild(categoryFilter);
             }
         });
+    }
+
+     let user = '<?=$user_id?>';
+
+    function uploadWish() {
+        if(user == null) {
+            alert('Sorry, you can only upload wishes when you\'ve signed in')
+        } else {
+            let newWishTitle = document.getElementById('newWishTitle').value;
+            let newWishDesc = document.getElementById('newWishDesc').value;
+            // let categoryDropDown = document.getElementById('categoryInputs');
+            // let newWishCat = categoryDropDown[categoryDropDown.selectedIndex].value;
+            let newWishCat = 'Automotive'
+
+            // Image Upload, can be null
+            let newWishImg = document.getElementById('newWishImage');
+
+            if(newWishTitle == '' || newWishDesc == '' || newWishCat == ''){
+                alert('Please fill in the input fields properly');
+            } else {
+                let newKey = 0;
+                let imageUpload = false;
+                dbrf.ref('wishes').once('value').then(function(dataSnapshot){
+                    dataSnapshot.forEach(function(key){
+                        if(key.key > newKey)
+                            newKey = parseInt(key.key) + 1;
+                    });
+
+                    let now = new Date()
+                    let timestamp = now.getFullYear() + '/' + now.getMonth() + '/' + now.getDate() + ' ' + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+
+                    
+                    if(newWishImg.files && newWishImg.files[0]){
+                        let image = newWishImg.files[0].slice(0, newWishImg.files[0].size, 'image/jpg');
+                        let newFile = new File([image], newKey + '.jpg', {type: 'image/jpg'});
+
+                        strf.ref('users/' + user + '/' + newKey + '.jpg').put(newFile)
+
+                        let filename = newKey + '.jpg';
+
+                        dbrf.ref('wishes/' + newKey).set({
+                            category : newWishCat,
+                            descWish : newWishDesc,
+                            pictureWish : filename,
+                            timeWish : timestamp,
+                            titleWish : newWishTitle,
+                            uidUpWish : user
+                        });
+                    } else {
+                        dbrf.ref('wishes/' + newKey).set({
+                            category : newWishCat,
+                            descWish : newWishDesc,
+                            pictureWish : '',
+                            timeWish : timestamp,
+                            titleWish : newWishTitle,
+                            uidUpWish : user
+                        });   
+                    } 
+                });
+            }
+        }
     }
 </script>

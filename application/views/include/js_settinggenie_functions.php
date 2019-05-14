@@ -10,12 +10,14 @@
             let updates = {};
             updates['users/' + genie.uid + '/imgProfilePicture'] = 'profile.jpg';
             updates['users/' + genie.uid + '/imgBackground'] = 'backdrop.jpg';
-            firebase.database().ref().update(updates);
+            dbrf.ref().update(updates);
         });
     }
 
     function saveChanges(){
         let images = [];
+
+        let newName = document.getElementById('displayName');        
 
         let newProfilePic = document.getElementById('profilePictureInput');
         let newBackdropPic = document.getElementById('backdropPictureInput');
@@ -29,7 +31,6 @@
         if(newBackdropPic.files && newBackdropPic.files[0]){
             let blob = newBackdropPic.files[0].slice(0, newBackdropPic.files[0].size, 'image/jpg'); 
             let newFile = new File([blob], 'backdrop.jpg', {type: 'image/jpg'});
-
             images.push(newFile);
         }
 
@@ -41,7 +42,9 @@
         }
 
         Promise.all(promiseArr).then(function(results){
-            alert('Image Uploaded Successfully');
+            let update = {};
+            update['users/' + genie.uid + '/name'] = newName;
+            dbrf.ref().update(update);
             location.reload();
         });
     }
@@ -84,11 +87,11 @@
         let uid = "<?=$user_id?>";
 
         dbrf.ref('users/' + uid).once('value').then(function(dataSnapshot){
-            dbrf.ref('users/' + uid + '/toko/products').then(function(dataSS){
-                let productsArr = []
+            dbrf.ref('users/' + uid + '/toko/products').once('value').then(function(dataSS){
+                let productsArr = [];
 
                 dataSS.forEach(function(ss){
-                    dbrf.ref('products/' + ss.key).then(function(snapshot){
+                    dbrf.ref('products/' + ss.key).once('value').then(function(snapshot){
                         productsArr.push(new Product(
                             snapshot.key,
                             snapshot.child('category').val(),
@@ -136,7 +139,7 @@
                             tokoGenie
                         );
 
-                        applyToHTML(wisher);
+                        applyToHTML(genie);
                     });
                 } else {
                     genie = new Users(
@@ -156,7 +159,7 @@
     }
 
     function applyToHTML(genie){
-        document.getElementById('displayName').value = genie.name;
+        document.getElementById('genieName').innerHTML = genie.name;
         document.getElementById('storeName').innerHTML = genie.toko.name;
 
         let profileImageRef = 'whizzie_assets/empty/empty_profile.jpg';
@@ -254,12 +257,6 @@
     function submitAddress(){
         if(document.getElementById('oldAddressName').value != ''){
             // Remove old address
-        }
-
-        if(document.getElementById('newAddressName').value == '' || document.getElementById('newAddressName').value == null){
-            alert('Please Fill in the Address Name Properly!');
-        }
-        else{
             let oldAddressKey   = document.getElementById('oldAddressName').value;
             let newAddressKey   = document.getElementById('newAddressName').value;
             let newCityName     = document.getElementById('newAddressCity').value;
@@ -270,8 +267,9 @@
             let newReceiverName = document.getElementById('newAddressReceiverName').value;
             let isStoreAddress  = document.getElementById('isStoreAddress').checked;
 
+            dbrf.ref('users/' + genie.uid + '/alamat/' + oldAddressKey).remove();
 
-            dbrf.ref('users/' + genie.uid + '/alamat/' + targetAddress).set({
+            dbrf.ref('users/' + genie.uid + '/alamat/' + newAddressKey).set({
                 cityName : newCityName,
                 detailAddress : newDetailAddress,
                 phoneNum : newPhoneNumber,
@@ -283,10 +281,42 @@
             if(isStoreAddress){
                 let updates = {};
 
-                updates['users/' + genie.uid + '/storeAddress'] = targetAddress;
+                updates['users/' + genie.uid + '/storeAddress'] = newAddressKey;
                 firebase.database().ref().update(updates);
             }
         }
+
+        if(document.getElementById('newAddressName').value == '' || document.getElementById('newAddressName').value == null){
+            alert('Please Fill in the Address Name Properly!');
+        }
+        else{
+            let newAddressKey   = document.getElementById('newAddressName').value;
+            let newCityName     = document.getElementById('newAddressCity').value;
+            let newDetailAddress= document.getElementById('newAddressDetail').value;
+            let newPhoneNumber  = document.getElementById('newAddressPhoneNumber').value;
+            let newPostalCode   = document.getElementById('newAddressPostalCode').value;
+            let newProvinceName = document.getElementById('newAddressProvinceName').value;
+            let newReceiverName = document.getElementById('newAddressReceiverName').value;
+            let isStoreAddress  = document.getElementById('isStoreAddress').checked;
+
+            dbrf.ref('users/' + genie.uid + '/alamat/' + newAddressKey).set({
+                cityName : newCityName,
+                detailAddress : newDetailAddress,
+                phoneNum : newPhoneNumber,
+                postalCode : newPostalCode,
+                provinceName : newProvinceName,
+                receiverName : newReceiverName
+            });
+
+            if(isStoreAddress){
+                let updates = {};
+
+                updates['users/' + genie.uid + '/storeAddress'] = newAddressKey;
+                firebase.database().ref().update(updates);
+            }
+        }
+
+        location.reload();
     }
 
     document.onready = function(){init()}
