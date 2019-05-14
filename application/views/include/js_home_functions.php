@@ -58,8 +58,8 @@
                                                     '</div>' +
                                                     '<div class="product-body">' +
                                                         '<p class="product-category"> ' + latestWishList[i].category + ' </p>' +
-                                                        '<h3 class="product-name"> <a href="#"> ' + latestWishList[i].title + ' </a> </h3>' +
-                                                        '<p> ' + latestWishList[i].desc + ' </p>' +
+                                                        '<h3 class="product-name" style = "height : 30px;"> <a href="#"> ' + (latestWishList[i].title.length > 40 ? latestWishList[i].title.substring(0, 40) + '...' : latestWishList[i].title) + ' </a> </h3>' +
+                                                        '<p style = "height:30px;"> ' + (latestWishList[i].desc.length > 60 ? latestWishList[i].desc.substring(0, 60) + '...' : latestWishList[i].desc) + ' </p>' +
                                                         '<div class="row">' + 
                                                             '<button class="btn"> <b> ' + offerCount + ' Offers </b> </button>' +
                                                             '<div class="btn-group product-btns">' +
@@ -200,9 +200,6 @@
                                                                     '<div class="product-body">' +
                                                                         '<h3 class="product-name" style = "height: 30px;"> <a href="#"> ' + (featuredGenies[i].toko.name.length > 40 ? featuredGenies[i].toko.name.substring(0, 40) + '...' : featuredGenies[i].toko.name) + ' </a> </h3>' +
                                                                         '<p class="product-category" style = "height:30px;"> ' + (featuredGenies[i].toko.desc.length > 55 ? featuredGenies[i].toko.desc.substring(0, 55) + '...' : featuredGenies[i].toko.desc) +  ' </p>' +
-                                                                    '</div>' +
-                                                                    '<div class="add-to-cart">' + 
-                                                                        '<button class="add-to-cart-btn"> <i class="fa fa-user"></i> Visit Profile </button>' +
                                                                     '</div>';
 
                                 subSubSection.appendChild(featuredGenieElement);

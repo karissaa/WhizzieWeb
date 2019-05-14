@@ -82,32 +82,32 @@
 					<div class="form-group">
 						<label class="control-label col-sm-2" for="title">Title</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="title" placeholder="Enter title">
+							<input type="text" class="form-control" placeholder="Enter title" id = "newWishTitle">
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="control-label col-sm-2" for="descWish">Description</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="descWish" placeholder="Enter description">
+							<input type="text" class="form-control" placeholder="Enter description" id = "newWishDesc">
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
 							<div class="dropdown">
 								<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Categories
-								<span class="caret"></span></button>
-								<ul class="dropdown-menu" id = "categoryInputs">
-									<!-- Bikin Foreach untuk Categories -->
-									<li><a href="#">Automotive</a></li>
-									<li><a href="#">Beauty</a></li>
-									<li><a href="#">Men Fashion</a></li>
-								</ul>
+									<span class="caret"></span>
+								</button>
+									<ul class="dropdown-menu" id = "categoryInputs">
+										<li><a href="#">Automotive</a></li>
+										<li><a href="#">Beauty</a></li>
+										<li><a href="#">Men Fashion</a></li>
+									</ul>
 							</div>
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
-							<input type="file" name="img[]" class="file">
+							<input type="file" name="img" class="file" id = "newWishImage">
 							<div class="input-group col-xs-12">
 								<span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
 								<input type="text" class="form-control input-lg" disabled placeholder="Upload Image">
@@ -119,7 +119,7 @@
 					</div>
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
-							<button class="btn btn-info">Upload Wish</button>
+							<a class="btn btn-info" onclick = "uploadWish()">Upload Wish</a>
 						</div>
 					</div>
 				</form>

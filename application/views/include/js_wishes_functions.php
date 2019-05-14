@@ -103,4 +103,88 @@
             }
         });
     }
+
+    let user = '<?=$user_id?>';
+
+    //Handle waiting to upload each file using promise
+    function uploadImageAsPromise (imageFile) {
+        return new Promise(function (resolve, reject) {
+            //Upload file
+            let task = strf.ref('users/' + user + '/' + imageFile.name).put(imageFile);
+        });
+    }
+
+    function uploadWish(){
+        if(user == null){
+            alert('Sorry, you can only upload wishes when you\'ve signed in')
+        } else {
+            let newWishTitle = document.getElementById('newWishTitle').value;
+            let newWishDesc = document.getElementById('newWishDesc').value;
+            // let categoryDropDown = document.getElementById('categoryInputs');
+            // let newWishCat = categoryDropDown[categoryDropDown.selectedIndex].value;
+            let newWishCat = 'Automotive'
+
+            // Image Upload, can be null
+            let newWishImg = document.getElementById('newWishImage');
+
+            if(newWishTitle == '' || newWishDesc == '' || newWishCat == ''){
+                alert('Please fill in the input fields properly');
+            } else {
+                let newKey = 0;
+                let imageUpload = false;
+                dbrf.ref('wishes').once('value').then(function(dataSnapshot){
+                    dataSnapshot.forEach(function(key){
+                        if(key.key > newKey)
+                            newKey = parseInt(key.key) + 1;
+                    });
+
+                    let now = new Date()
+                    let timestamp = now.getFullYear() + '/' + now.getMonth() + '/' + now.getDate() + ' ' + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+
+                    
+                    if(newWishImg.files && newWishImg.files[0]){
+                        let image = newWishImg.files[0].slice(0, newWishImg.files[0].size, 'image/jpg');
+                        let newFile = new File([image], newKey + '.jpg', {type: 'image/jpg'});
+
+                        strf.ref('users/' + user + '/' + newKey + '.jpg').put(newFile)
+
+                        let filename = newKey + '.jpg';
+
+                        dbrf.ref('wishes/' + newKey).set({
+                                category : newWishCat,
+                                descWish : newWishDesc,
+                                pictureWish : filename,
+                                timeWish : timestamp,
+                                titleWish : newWishTitle,
+                                uidUpWish : user
+                            });
+
+                        // Promise.all([uploadImageAsPromise(newFile)]).then(function(snapshot){
+                        //     let filename = newKey + '.jpg';
+
+                        //     dbrf.ref('wishes/' + newKey).set({
+                        //         category : newWishCat,
+                        //         descWish : newWishDesc,
+                        //         pictureWish : filename,
+                        //         timeWish : timestamp,
+                        //         titleWish : newWishTitle,
+                        //         uidUpWish : user
+                        //     });
+                        // })
+                    } else {
+                        dbrf.ref('wishes/' + newKey).set({
+                            category : newWishCat,
+                            descWish : newWishDesc,
+                            pictureWish : '',
+                            timeWish : timestamp,
+                            titleWish : newWishTitle,
+                            uidUpWish : user
+                        });   
+                    }
+                    
+                });
+
+            }
+        }
+    }
 </script>
